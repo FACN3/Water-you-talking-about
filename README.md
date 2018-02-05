@@ -1,4 +1,4 @@
-# **Water you talking about Project**
+# **Water you talking about**
 
 
 
@@ -8,15 +8,19 @@ Our website focus on reducing water consumption and helping people calculate how
 ## Team:
 
 Developers: @Amirk390 and @SamiSha99
+
 Scrum: @Karyum
+
 QA: @matthewdking
 
 ## Tech stack:
 
 Frontend framework: React.
-Backend: none.
+
 CSS: Styled-components.
+
 Compiler: Webpack with Babel.
+
 Linting: ESLint with React config.
 
 
