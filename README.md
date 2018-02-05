@@ -1,4 +1,4 @@
-# **Washinator Project**
+# **Water you talking about Project**
 Our website focus on reducing water consumption and helping people calculate how much water they used daily.
 
 ## Getting Started
