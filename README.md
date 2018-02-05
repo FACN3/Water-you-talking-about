@@ -28,7 +28,7 @@ Linting: ESLint with React config.
 
 
 1. clone it `git clone git@github.com:FACN3/washinator.git` in your tarminal
-+ then `npm i`
+2. install npm packages  `npm i`
 
 See also the list of [contributors](https://github.com/FACN3/washinator/graphs/contributors) who participated in this project.
 
@@ -45,7 +45,7 @@ So that i can reduce my water expenses
 ![Calculator](https://user-images.githubusercontent.com/24490876/35803983-846a0468-0a7e-11e8-9b37-d00265775367.png)
 
 ### User Story:
-:woman: As a Water consumer, I want to choose a certain activity and know how much water being used also how much money dollar So that I would be more careful with using Water.
+:raising_hand: As a Water consumer, I want to choose a certain activity and know how much water being used also how much money dollar So that I would be more careful with using Water.
 
 
 
