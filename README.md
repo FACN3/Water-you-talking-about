@@ -1,23 +1,28 @@
 # **Water you talking about Project**
 Our website focus on reducing water consumption and helping people calculate how much water they used daily.
 
-## Getting Started
+## Team:
 
-To start our project first clone it using
+Developers: @Amirk390 and @SamiSha99
+Scrum: @Karyum
+QA: @matthewdking
 
-`git clone git@github.com:FACN3/washinator.git` in your tarminal
+## Tech stack:
 
-### Installing
+Frontend framework: React.
+Backend: none.
+CSS: Styled-components.
+Compiler: Webpack with Babel.
+Linting: ESLint with React config.
 
-Before using our code you need to install our the packages by using
 
-`npm i` or `npm install`
+## Local instructions
 
-in the command line
 
-## Authors
+clone it: `git clone git@github.com:FACN3/washinator.git` in your tarminal
+then: `npm i`
 
-* **Amir K**
-* **Sami Sh**
+
+
 
 See also the list of [contributors](https://github.com/FACN3/washinator/graphs/contributors) who participated in this project.
