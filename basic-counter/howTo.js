@@ -1,22 +1,23 @@
 class App extends React.Component {
-  constructor (props) {
+  constructor(props) {
     this.state = {
       count: 0
-    }
+    };
   }
 
-  onClick () {
-    this.State({
+  onClick(e) {
+    this.setState({
       count: this.state.count + 1
     });
   }
 
-
   render() {
     return (
-        <h1>Counter: </h1>
-
-    )
+      <div>
+        <h1>{this.state.count}</h1>
+        <button onClick={this.onClick.bind(this)}>Count Up!!</button>
+      </div>
+    );
   }
 }
 
