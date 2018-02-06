@@ -1,5 +1,10 @@
 import React from 'react';
+import styled from 'styled-components';
 
-const App = () => <h1>Hey Amir and Sami and Mario</h1>;
+const Title = styled.h1`
+  color: blue;
+`;
+
+const App = () => <Title>Hey Amir and Sami and Mario</Title>;
 
 export default App;
