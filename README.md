@@ -1,4 +1,4 @@
-# **Water you talking about Project**
+# **Water you talking about**
 
 
 
@@ -8,15 +8,19 @@ Our website focus on reducing water consumption and helping people calculate how
 ## Team:
 
 Developers: @Amirk390 and @SamiSha99
-Scrum: @Karyum
+
+Scrum Master: @Karyum
+
 QA: @matthewdking
 
 ## Tech stack:
 
 Frontend framework: React.
-Backend: none.
+
 CSS: Styled-components.
+
 Compiler: Webpack with Babel.
+
 Linting: ESLint with React config.
 
 
@@ -24,19 +28,33 @@ Linting: ESLint with React config.
 
 
 1. clone it `git clone git@github.com:FACN3/washinator.git` in your tarminal
-+ then `npm i`
+2. install npm packages  `npm i`
 
 See also the list of [contributors](https://github.com/FACN3/washinator/graphs/contributors) who participated in this project.
 
-## Our ProtoType
+# Our Prototype
 
 [Our InVision ProtoType](https://invis.io/UNFO2C1YA2P)
 
 [Download link](https://projects.invisionapp.com/d/zipexport/download/projectid/13267105)
 
+
+
+
+### User Story:
+Below, we have some user stories and the solutions for that stories
+- - -
+:man: As a water consumer, I want, to calculate my overall water consumption, so that i can reduce my water expenses.
+
 ### Calculator
 
 ![Calculator](https://user-images.githubusercontent.com/24490876/35803983-846a0468-0a7e-11e8-9b37-d00265775367.png)
+
+---
+
+:raising_hand: As a water consumer, I want, to calculate my overall water consumption, so that i can reduce my water expenses.
+
+
 
 ### Specific Activity Prices
 
