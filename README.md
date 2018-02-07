@@ -1,9 +1,6 @@
 # **Water you talking about**
 
-
-
 Our website focus on reducing water consumption and helping people calculate how much water they used daily.
-
 
 ## Team:
 
@@ -23,12 +20,12 @@ Compiler: Webpack with Babel.
 
 Linting: ESLint with React config.
 
-
 ## Local instructions
 
-
 1. clone it `git clone git@github.com:FACN3/washinator.git` in your tarminal
-2. install npm packages  `npm i`
+2. install npm packages `npm i`
+3. run the dev server by doing `npm run dev`
+4. or build the bundle by doing `npm run build`
 
 See also the list of [contributors](https://github.com/FACN3/washinator/graphs/contributors) who participated in this project.
 
@@ -38,12 +35,12 @@ See also the list of [contributors](https://github.com/FACN3/washinator/graphs/c
 
 [Download link](https://projects.invisionapp.com/d/zipexport/download/projectid/13267105)
 
-
-
-
 ### User Story:
+
 Below, we have some user stories and the solutions for that stories
-- - -
+
+---
+
 :man: As a water consumer, I want, to calculate my overall water consumption, so that i can reduce my water expenses.
 
 ### Calculator
@@ -53,8 +50,6 @@ Below, we have some user stories and the solutions for that stories
 ---
 
 :raising_hand: As a water consumer, I want, to calculate my overall water consumption, so that i can reduce my water expenses.
-
-
 
 ### Specific Activity Prices
 

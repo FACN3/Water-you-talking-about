@@ -1,0 +1,57 @@
+{
+  "name": "water-you-talking-about",
+  "version": "1.0.0",
+  "description": "A water consumption app",
+  "main": "index.jsx",
+  "scripts": {
+    "dev": "webpack-dev-server --open --config ./webpack.config.js",
+    "build": "webpack --config webpack.config.js",
+    "lint": "eslint **/*.{js,jsx} --quiet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FACN3/Water-you-talking-about.git"
+  },
+  "keywords": [
+    "Water",
+    "Sea",
+    "Wet",
+    "Moist",
+    "H20"
+  ],
+  "author": [
+    "Amir ",
+    "Sami"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FACN3/Water-you-talking-about/issues"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "homepage": "https://github.com/FACN3/Water-you-talking-about#readme",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "html-webpack-plugin": "^2.30.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "styled-components": "^3.1.6",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-env": "0.0.3",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.6.1",
+    "pre-commit": "^1.2.2"
+  }
+}
