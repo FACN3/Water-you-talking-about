@@ -3,33 +3,25 @@ import React from 'react';
 import styled from 'styled-components';
 import NavBar from './NavBar';
 
+// Styling section
+
 const Container = styled.div`
   display: flex;
-  flex-direction: column;
-  text-align: left;
+  justify-content: center;
+  flex-direction: row;
   align-items: center;
+  width: 100%;
+  background-color: #383854;
 `;
-const Title = styled.h1`
-  display: flex;
-  text-align: center;
-  color: blue;
-  font-size: 44px;
-  font-weight: bold;
 
-  @media only screen and (max-width: 700px) {
-    font-size: 30px;
-  }
+// our functionality
 
-  @media only screen and (max-width: 400px) {
-    font-size: 22px;
-  }
-`;
+// our App
 
 const App = () => (
   <BrowserRouter>
     <Container>
       <NavBar />
-      <Title>Water You Talking About?</Title>
     </Container>
   </BrowserRouter>
 );
