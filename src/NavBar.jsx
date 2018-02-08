@@ -118,8 +118,6 @@ const HLink = styled(Link)`
   }
 `;
 
-// const DropMenuContainer = styled.div``;
-
 const NavContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -131,7 +129,7 @@ class NavBar extends Component {
     super();
 
     this.state = {
-      clicked: false,
+      menuClick: false,
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -139,7 +137,7 @@ class NavBar extends Component {
 
   handleClick() {
     this.setState({
-      clicked: !this.state.clicked,
+      menuClick: !this.state.menuClick,
     });
   }
 
@@ -155,11 +153,11 @@ class NavBar extends Component {
           </MenuContainer>
         </Nav>
         <Nav2>
-          <DropdownMenu show={this.state.clicked} id="button">
+          <DropdownMenu show={this.state.menuClick} id="button">
             <HLink to="/">Home</HLink>
             <HLink to="/calculator">Calculator</HLink>
-            <HLink to="prices">Prices</HLink>
-            <HLink to="statistis">Statistics</HLink>
+            <HLink to="/prices">Prices</HLink>
+            <HLink to="/statistics">Statistics</HLink>
           </DropdownMenu>
         </Nav2>
       </NavContainer>

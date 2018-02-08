@@ -14,8 +14,6 @@ const Container = styled.div`
   background-color: #383854;
 `;
 
-// our functionality
-
 // our App
 
 const App = () => (
