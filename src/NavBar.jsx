@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
 import './styles/reset';
 
@@ -58,15 +58,32 @@ const DropdownBtn = styled.a`
   margin: 0 0 0 1rem;
 `;
 
+const animnavbar = keyframes`
+  0% {
+    height: 0rem;
+    margin: 0 0 0rem 0;
+   }
+  100% {
+    height: 1.6rem;
+    margin: 0 0 1rem 0;
+   }
+  `;
+
 const DropdownMenu = styled.div`
   display: ${props => (props.show ? 'flex' : 'none')};
   justify-content: center;
   text-align: center;
-  height: 2rem;
   background-color: #383854;
   font-size: 18px;
   font-weight: bold;
   width: 100%;
+  animation-name: ${animnavbar};
+  animation-duration: 0.25s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  height: 1.5rem;
   margin: 0 0 1rem 0;
 
   @media only screen and (max-width: 700px) {
@@ -89,10 +106,10 @@ const HLink = styled(Link)`
   color: #a3bdff;
   text-decoration: none;
   font-size: 24px;
-  margin: 0 10rem 0 10rem;
+  margin: 0 5.5rem 0 5.5rem;
 
   @media only screen and (max-width: 1025px) {
-    margin: 0 5.5rem 0 5.5rem;
+    margin: 0 4rem 0 4rem;
   }
 
   @media only screen and (max-width: 700px) {
