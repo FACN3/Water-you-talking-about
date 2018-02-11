@@ -6,14 +6,12 @@ import './styles/reset';
 const MenuContainer = styled.div`
   display: flex;
   justify-content: center;
-  flex-direction: row;
   align-items: center;
   width: 100%;
 `;
 
 const Nav = styled.nav`
   display: flex;
-  flex-direction: row;
   max-height: 3rem;
   background-color: #383854;
   width: 100%;
@@ -41,10 +39,9 @@ const Title = styled.h1`
   }
 `;
 
-const dropNav = styled.nav`
+const DropNav = styled.nav`
   display: flex;
   align-content: center;
-  flex-direction: row;
   max-height: 2.5rem;
   width: 100%;
 `;
@@ -151,14 +148,14 @@ class NavBar extends Component {
             <Title>Water You Talking About?</Title>
           </MenuContainer>
         </Nav>
-        <dropNav>
+        <DropNav>
           <DropdownMenu show={this.state.menuClick} id="button">
             <HLink to="/">Home</HLink>
             <HLink to="/calculator">Calculator</HLink>
             <HLink to="/prices">Prices</HLink>
             <HLink to="/statistics">Statistics</HLink>
           </DropdownMenu>
-        </dropNav>
+        </DropNav>
       </NavContainer>
     );
   }
