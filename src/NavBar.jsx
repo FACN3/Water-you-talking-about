@@ -62,7 +62,7 @@ const animationBar = keyframes`
    }
   100% {
     height: 1.5rem;
-    margin: 0 0 10rem 0;
+    margin: 0 0 1rem 0;
    }
   `;
 
