@@ -3,6 +3,11 @@
 import { injectGlobal } from 'styled-components';
 
 injectGlobal`
+
+html {
+  background-color: #d1f4ff;
+}
+
 html,
 body,
 div,
