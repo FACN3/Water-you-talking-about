@@ -11,7 +11,6 @@ import Statistics from './Statistics';
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  flex-direction: row;
   align-items: center;
   width: 100%;
   background-color: #383854;
