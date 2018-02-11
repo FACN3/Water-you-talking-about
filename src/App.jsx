@@ -5,6 +5,8 @@ import Home from './Home';
 import NavBar from './NavBar';
 import './styles/reset';
 
+const Container = styled.div``;
+
 // our App
 
 const App = () => (
