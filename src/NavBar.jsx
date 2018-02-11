@@ -41,7 +41,7 @@ const Title = styled.h1`
   }
 `;
 
-const Nav2 = styled.nav`
+const dropNav = styled.nav`
   display: flex;
   align-content: center;
   flex-direction: row;
@@ -151,14 +151,14 @@ class NavBar extends Component {
             <Title>Water You Talking About?</Title>
           </MenuContainer>
         </Nav>
-        <Nav2>
+        <dropNav>
           <DropdownMenu show={this.state.menuClick} id="button">
             <HLink to="/">Home</HLink>
             <HLink to="/calculator">Calculator</HLink>
             <HLink to="/prices">Prices</HLink>
             <HLink to="/statistics">Statistics</HLink>
           </DropdownMenu>
-        </Nav2>
+        </dropNav>
       </NavContainer>
     );
   }
