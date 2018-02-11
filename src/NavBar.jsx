@@ -64,8 +64,8 @@ const animnavbar = keyframes`
     margin: 0 0 0rem 0;
    }
   100% {
-    height: 1.6rem;
-    margin: 0 0 1rem 0;
+    height: 1.5rem;
+    margin: 0 0 10rem 0;
    }
   `;
 
