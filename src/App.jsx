@@ -1,10 +1,26 @@
+import { BrowserRouter } from 'react-router-dom';
 import React from 'react';
 import styled from 'styled-components';
+import NavBar from './NavBar';
 
-const Title = styled.h1`
-  color: blue;
+// Styling section
+
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #383854;
 `;
 
-const App = () => <Title>Hey Amir and Sami and Mario</Title>;
+// our App
+
+const App = () => (
+  <BrowserRouter>
+    <Container>
+      <NavBar />
+    </Container>
+  </BrowserRouter>
+);
 
 export default App;
