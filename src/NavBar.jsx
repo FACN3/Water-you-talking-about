@@ -28,10 +28,12 @@ const Title = styled.h1`
   font-weight: bold;
   margin: 1rem;
   padding: 0 1rem 0.2rem;
+
   @media only screen and (max-width: 700px) {
     font-size: 1rem;
     width: 11.5em;
   }
+
   @media only screen and (max-width: 400px) {
     font-size: 0.8rem;
   }
@@ -80,9 +82,11 @@ const DropdownMenu = styled.div`
   animation-direction: normal;
   height: 1.5rem;
   margin: 0 0 1rem 0;
+
   @media only screen and (max-width: 700px) {
     padding: 0 2rem 0 0;
   }
+
   @media only screen and (max-width: 420px) {
     font-size: 0.87rem;
     padding: 0 1rem 0 0;
@@ -99,9 +103,11 @@ const HLink = styled(Link)`
   text-decoration: none;
   font-size: 1.5rem;
   margin: 0 5.5rem 0 5.5rem;
+
   @media only screen and (max-width: 1025px) {
     margin: 0 4rem 0 4rem;
   }
+
   @media only screen and (max-width: 700px) {
     font-size: 0.87rem;
     margin: 0 1.5rem 0 1.5rem;
