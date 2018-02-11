@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import NavBar from './NavBar';
 
 class Prices extends Component {
   constructor() {
@@ -10,8 +9,6 @@ class Prices extends Component {
   render() {
     return (
       <div>
-        <NavBar />
-        <br />
         <h1>Hello this is Prices</h1>
       </div>
     );

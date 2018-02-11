@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import NavBar from './NavBar';
 
 class Calculator extends Component {
   constructor() {
@@ -10,7 +9,6 @@ class Calculator extends Component {
   render() {
     return (
       <div>
-        <NavBar />
         <h1>Hello this is Calculator</h1>
       </div>
     );
