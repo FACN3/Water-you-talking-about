@@ -85,6 +85,7 @@ const DropdownMenu = styled.div`
 
   @media only screen and (max-width: 420px) {
     font-size: 0.87rem;
+    margin: 0 0 0.5rem 0;
   }
 `;
 
@@ -99,12 +100,12 @@ const HLink = styled(Link)`
   color: #a3bdff;
 
   @media only screen and (max-width: 700px) {
-    font-size: 0.87rem;
-    padding: 0 2rem 0 0;
+    font-size: 1rem;
+    padding: 0 1rem 0 0;
   }
   @media only screen and (max-width: 420px) {
-    padding: 0 1rem 0 0;
-    font-size: 0.5rem;
+    padding: 0 0.2rem;
+    font-size: 0.8rem;
   }
 `;
 

@@ -46,7 +46,7 @@ const SubTitle = styled.h2`
   background-color: #383854;
   color: #d1f4ff;
   border-radius: 1rem;
-  margin: 3rem 0 1rem 0;
+  margin: 2rem 0 1rem 0;
   padding: 0.5rem 8rem;
 
   @media only screen and (max-width: 950px) {
@@ -56,7 +56,7 @@ const SubTitle = styled.h2`
   @media only screen and (max-width: 700px) {
     font-size: 0.75rem;
     width: 60%;
-    margin: 3rem 0 1rem 0;
+    margin: 1rem 0 1rem 0;
     padding: 0.5rem;
   }
 `;
@@ -81,6 +81,8 @@ const ButtonContainer = styled.section`
 `;
 
 const Button = styled(Link)`
+  display: flex;
+  justify-content: center;
   font-size: 1rem;
   background-color: rgba(0, 0, 0, 0.25);
   border: 0.1rem rgba(0, 0, 0, 0.25) solid;
@@ -99,13 +101,15 @@ const Button = styled(Link)`
 
   @media only screen and (max-width: 700px) {
     font-size: 1rem;
-    padding: 0 2.5rem 0 2.5rem;
+    padding: 1.5rem;
     margin: 1rem 0 0 0;
-    width: 45%;
+    width: 55%;
   }
 
   @media only screen and (max-width: 420px) {
     font-size: 1rem;
+    width: 65%;
+    padding: 1rem;
     margin: 1rem 0 0 0;
   }
 `;
