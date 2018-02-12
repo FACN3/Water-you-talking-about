@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const Container = styled.div`
+const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   color: #383854;
   font-family: Righteous;
-  margin: 2rem 0 0 0;
+  margin: 2rem 0 2rem 0;
   font-size: 2rem;
 `;
 
@@ -26,7 +26,7 @@ const Title = styled.h1`
   }
 `;
 
-const Info = styled.h1`
+const Info = styled.h2`
   font-size: 1.5rem;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.25);
@@ -44,17 +44,17 @@ const Info = styled.h1`
   }
 `;
 
-const SubTitle = styled.h1`
+const SubTitle = styled.h2`
   font-size: 2.5rem;
   background-color: #383854;
   width: 50%;
   color: #d1f4ff;
   border-radius: 1rem;
-  margin: 5rem 0 1rem 0;
+  margin: 1rem 0 1rem 0;
   padding: 2rem 2rem 2rem 2rem;
 
   @media only screen and (max-width: 700px) {
-    font-size: 1rem;
+    font-size: 0.75rem;
     width: 60%;
   }
 `;
@@ -72,7 +72,7 @@ const Button = styled(Link)`
   text-decoration: none;
 
   @media only screen and (max-width: 700px) {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 2rem 0 0 0;
     padding: 0 2.5rem 0 2.5rem;
     width: 30%;
@@ -82,7 +82,7 @@ const Button = styled(Link)`
     font-size: 1rem;
     margin: 2rem 0 0 0;
     padding: 0 2.5rem 0 2.5rem;
-    width: 30%;
+    width: 40%;
   }
 `;
 

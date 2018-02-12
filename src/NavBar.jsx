@@ -20,6 +20,7 @@ const Nav = styled.nav`
 const Title = styled.h1`
   display: flex;
   justify-content: center;
+  text-align: center;
   border: 0.1rem solid #a3bdff;
   border-radius: 1rem;
   color: #a3bdff;
@@ -31,11 +32,13 @@ const Title = styled.h1`
 
   @media only screen and (max-width: 700px) {
     font-size: 1rem;
+    padding: 0 0.5rem 0.5rem;
     width: 11.5em;
   }
 
   @media only screen and (max-width: 400px) {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
+    padding: 0 0.5rem 0.2rem;
   }
 `;
 
@@ -61,7 +64,7 @@ const animationBar = keyframes`
     margin: 0 0 0rem 0;
    }
   100% {
-    height: 1.5rem;
+    height: 2rem;
     margin: 0 0 1rem 0;
    }
   `;
@@ -76,11 +79,8 @@ const DropdownMenu = styled.div`
   width: 100%;
   animation-name: ${animationBar};
   animation-duration: 0.25s;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
   animation-direction: normal;
-  height: 1.5rem;
+  height: 2rem;
   margin: 0 0 1rem 0;
 
   @media only screen and (max-width: 700px) {
@@ -102,6 +102,7 @@ const HLink = styled(Link)`
   color: #a3bdff;
   text-decoration: none;
   font-size: 1.5rem;
+  padding: 1rem 0 1rem 0;
   margin: 0 5.5rem 0 5.5rem;
 
   @media only screen and (max-width: 1025px) {
@@ -110,7 +111,11 @@ const HLink = styled(Link)`
 
   @media only screen and (max-width: 700px) {
     font-size: 0.87rem;
-    margin: 0 1.5rem 0 1.5rem;
+    margin: 0 0.8rem 0 0.8rem;
+  }
+  @media only screen and (max-width: 400px) {
+    font-size: 0.5rem;
+    margin: 0 0.5rem 0 0.5rem;
   }
 `;
 
@@ -127,14 +132,6 @@ class NavBar extends Component {
     this.state = {
       menuClick: false,
     };
-
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
-    this.setState({
-      menuClick: !this.state.menuClick,
-    });
   }
 
   render() {
@@ -142,7 +139,13 @@ class NavBar extends Component {
       <NavContainer>
         <Nav>
           <MenuContainer>
-            <DropdownBtn onClick={this.handleClick}>
+            <DropdownBtn
+              onClick={() =>
+                this.setState({
+                  menuClick: !this.state.menuClick,
+                })
+              }
+            >
               <i className="fa fa-bars" />
             </DropdownBtn>
             <Title>Water You Talking About?</Title>

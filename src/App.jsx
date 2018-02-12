@@ -4,6 +4,7 @@ import React from 'react';
 import Home from './Home';
 import NavBar from './NavBar';
 import './styles/reset';
+import './styles/style';
 
 const Container = styled.div``;
 
