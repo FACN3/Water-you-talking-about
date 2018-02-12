@@ -29,7 +29,8 @@
     "url": "https://github.com/FACN3/Water-you-talking-about/issues"
   },
   "pre-commit": [
-    "lint"
+    "lint",
+    "test"
   ],
   "homepage": "https://github.com/FACN3/Water-you-talking-about#readme",
   "dependencies": {
