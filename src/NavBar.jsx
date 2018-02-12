@@ -62,11 +62,7 @@ const animationBar = keyframes`
     margin: 0 0 0rem 0;
    }
   100% {
-<<<<<<< HEAD
-    height: 1.6rem;
-=======
     height: 2rem;
->>>>>>> master
     margin: 0 0 1rem 0;
    }
   `;
