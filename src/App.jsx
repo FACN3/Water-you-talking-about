@@ -1,17 +1,12 @@
-import { BrowserRouter } from 'react-router-dom';
-import React from 'react';
+import { Switch, BrowserRouter, Route } from 'react-router-dom';
 import styled from 'styled-components';
+import React from 'react';
+import Home from './Home';
 import NavBar from './NavBar';
+import './styles/reset';
+import './styles/style';
 
-// Styling section
-
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  background-color: #383854;
-`;
+const Container = styled.div``;
 
 // our App
 
@@ -19,6 +14,9 @@ const App = () => (
   <BrowserRouter>
     <Container>
       <NavBar />
+      <Switch>
+        <Route exact path="/" component={Home} />
+      </Switch>
     </Container>
   </BrowserRouter>
 );

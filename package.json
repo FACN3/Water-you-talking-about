@@ -4,7 +4,7 @@
   "description": "A water consumption app",
   "main": "index.jsx",
   "scripts": {
-    "dev": "webpack-dev-server --open --config ./webpack.config.js",
+    "dev": "webpack-dev-server --open --host 0.0.0.0 --config ./webpack.config.js",
     "build": "webpack --config webpack.config.js",
     "lint": "eslint **/*.{js,jsx} --quiet",
     "test": "babel-tape-runner tests/test.js"
