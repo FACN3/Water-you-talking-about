@@ -26,7 +26,6 @@ const Title = styled.h1`
   color: #a3bdff;
   font-size: 1.5rem;
   width: 20rem;
-  font-weight: bold;
   margin: 1rem;
   padding: 0 1rem 0.2rem;
 
@@ -45,7 +44,6 @@ const Title = styled.h1`
 const DropNav = styled.nav`
   display: flex;
   align-content: center;
-  max-height: 2.5rem;
   width: 100%;
 `;
 
@@ -74,22 +72,19 @@ const DropdownMenu = styled.div`
   justify-content: center;
   text-align: center;
   background-color: #383854;
-  font-size: 1.12rem;
-  font-weight: bold;
   width: 100%;
   animation-name: ${animationBar};
   animation-duration: 0.25s;
   animation-direction: normal;
   height: 2rem;
   margin: 0 0 1rem 0;
+  padding: 0 0 0.5rem 0;
 
   @media only screen and (max-width: 700px) {
-    padding: 0 2rem 0 0;
   }
 
   @media only screen and (max-width: 420px) {
     font-size: 0.87rem;
-    padding: 0 1rem 0 0;
   }
 `;
 
@@ -98,24 +93,18 @@ const HLink = styled(Link)`
   flex-direction: column;
   text-align: center;
   justify-content: center;
+  font-size: 1.5rem;
+  text-decoration: none;
   width: 100%;
   color: #a3bdff;
-  text-decoration: none;
-  font-size: 1.5rem;
-  padding: 1rem 0 1rem 0;
-  margin: 0 5.5rem 0 5.5rem;
-
-  @media only screen and (max-width: 1025px) {
-    margin: 0 4rem 0 4rem;
-  }
 
   @media only screen and (max-width: 700px) {
     font-size: 0.87rem;
-    margin: 0 0.8rem 0 0.8rem;
+    padding: 0 2rem 0 0;
   }
   @media only screen and (max-width: 400px) {
+    padding: 0 1rem 0 0;
     font-size: 0.5rem;
-    margin: 0 0.5rem 0 0.5rem;
   }
 `;
 
