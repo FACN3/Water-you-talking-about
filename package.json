@@ -7,31 +7,19 @@
     "dev": "webpack-dev-server --open --config ./webpack.config.js",
     "build": "webpack --config webpack.config.js",
     "lint": "eslint **/*.{js,jsx} --quiet",
-    "test": "babel-tape-runner tests/test.jsx"
+    "test": "babel-tape-runner tests/test.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FACN3/Water-you-talking-about.git"
   },
-  "keywords": [
-    "Water",
-    "Sea",
-    "Wet",
-    "Moist",
-    "H20"
-  ],
-  "author": [
-    "Amir ",
-    "Sami"
-  ],
+  "keywords": ["Water", "Sea", "Wet", "Moist", "H20"],
+  "author": ["Amir ", "Sami"],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/FACN3/Water-you-talking-about/issues"
   },
-  "pre-commit": [
-    "lint",
-    "test"
-  ],
+  "pre-commit": ["lint", "test"],
   "homepage": "https://github.com/FACN3/Water-you-talking-about#readme",
   "dependencies": {
     "babel-core": "^6.26.0",
@@ -43,7 +31,6 @@
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
     "styled-components": "^3.1.6",
-    "tape": "^4.8.0",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1"
   },
@@ -57,6 +44,7 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.6.1",
-    "pre-commit": "^1.2.2"
+    "pre-commit": "^1.2.2",
+    "tape": "^4.8.0"
   }
 }
