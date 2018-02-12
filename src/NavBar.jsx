@@ -31,11 +31,11 @@ const Title = styled.h1`
 
   @media only screen and (max-width: 700px) {
     font-size: 1rem;
-    padding: 0 0.5rem 0.5rem;
+    padding: 0;
     width: 11.5em;
   }
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 420px) {
     font-size: 0.6rem;
     padding: 0 0.5rem 0.2rem;
   }
@@ -102,7 +102,7 @@ const HLink = styled(Link)`
     font-size: 0.87rem;
     padding: 0 2rem 0 0;
   }
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 420px) {
     padding: 0 1rem 0 0;
     font-size: 0.5rem;
   }
