@@ -25,5 +25,10 @@ module.exports = {
       liters: 4,
       cost: 0.0356,
     },
+    {
+      name: 'Bottle',
+      liters: 2,
+      cost: 0.0178,
+    },
   ],
 };
