@@ -9,7 +9,6 @@ test('Test #0', (t) => {
   };
 
   const actual = calculator(data, { toilet: 2 });
-  console.log(expected, actual);
   t.deepEqual(actual, expected);
   t.end();
 });
@@ -21,7 +20,6 @@ test('Test #1', (t) => {
   };
 
   const actual = calculator(data, { shower: 7 });
-  console.log(expected, actual);
   t.deepEqual(actual, expected);
   t.end();
 });
@@ -33,7 +31,6 @@ test('Test #2', (t) => {
   };
 
   const actual = calculator(data, { toilet: 2, shower: 7 });
-  console.log(expected, actual);
   t.deepEqual(actual, expected);
   t.end();
 });
@@ -51,7 +48,6 @@ test('Test #3', (t) => {
     'Washing machine': 2,
     Dishwasher: 1,
   });
-  console.log(expected, actual);
   t.deepEqual(actual, expected);
   t.end();
 });
