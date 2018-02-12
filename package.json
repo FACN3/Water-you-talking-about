@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack-dev-server --open --host 0.0.0.0 --config ./webpack.config.js",
     "build": "webpack --config webpack.config.js",
-    "lint": "eslint **/*.{js,jsx} --quiet"
+    "lint": "eslint **/*.{js,jsx} --quiet",
+    "test": "babel-tape-runner tests/test.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/FACN3/Water-you-talking-about/issues"
   },
-  "pre-commit": ["lint"],
+  "pre-commit": ["lint", "test"],
   "homepage": "https://github.com/FACN3/Water-you-talking-about#readme",
   "dependencies": {
     "babel-core": "^6.26.0",
@@ -35,6 +36,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
+    "babel-tape-runner": "^2.0.1",
     "eslint": "^4.17.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-react": "^1.1.7",
@@ -42,6 +44,7 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.6.1",
-    "pre-commit": "^1.2.2"
+    "pre-commit": "^1.2.2",
+    "tape": "^4.8.0"
   }
 }
