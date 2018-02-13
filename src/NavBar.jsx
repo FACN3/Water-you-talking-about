@@ -122,6 +122,14 @@ class NavBar extends Component {
     this.state = {
       menuClick: false,
     };
+
+    this.DropMenuToggle = this.DropMenuToggle.bind(this);
+  }
+
+  DropMenuToggle() {
+    this.setState({
+      menuClick: !this.state.menuClick,
+    });
   }
 
   render() {
@@ -129,13 +137,7 @@ class NavBar extends Component {
       <NavContainer>
         <Nav>
           <MenuContainer>
-            <DropdownBtn
-              onClick={() =>
-                this.setState({
-                  menuClick: !this.state.menuClick,
-                })
-              }
-            >
+            <DropdownBtn onClick={this.DropMenuToggle}>
               <i className="fa fa-bars" />
             </DropdownBtn>
             <Title>Water You Talking About?</Title>
@@ -143,10 +145,18 @@ class NavBar extends Component {
         </Nav>
         <DropNav>
           <DropdownMenu show={this.state.menuClick} id="button">
-            <HLink to="/">Home</HLink>
-            <HLink to="/calculator">Calculator</HLink>
-            <HLink to="/prices">Prices</HLink>
-            <HLink to="/statistics">Statistics</HLink>
+            <HLink onClick={this.DropMenuToggle} to="/">
+              Home
+            </HLink>
+            <HLink onClick={this.DropMenuToggle} to="/calculator">
+              Calculator
+            </HLink>
+            <HLink onClick={this.DropMenuToggle} to="/prices">
+              Prices
+            </HLink>
+            <HLink onClick={this.DropMenuToggle} to="/statistics">
+              Statistics
+            </HLink>
           </DropdownMenu>
         </DropNav>
       </NavContainer>
