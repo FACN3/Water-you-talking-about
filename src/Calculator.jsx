@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const Container = styled.section`
   display: flex;
   flex-direction: column;
+  text-align: center;
   align-items: center;
   color: #383854;
   margin: 2rem 0 2rem 0;
@@ -15,7 +16,12 @@ const SubTitle = styled.h2`
   color: #383854;
 `;
 
-const Content = styled.section`
+const ResultsTitle = styled.h2`
+  font-size: 1.5rem;
+  color: white;
+`;
+
+const Activitys = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,8 +41,9 @@ const Icon = styled.section`
   border-radius: 1rem;
   color: white;
   background-color: #383854;
+  border: 0.05rem rgba(255, 255, 255, 0.75) solid;
   box-shadow: 0.2rem 0.2rem 0.3rem #888888;
-  margin: 1rem 1rem;
+  margin: 0 0.5rem;
   padding: 1rem 2rem 5rem 2rem;
 `;
 
@@ -45,15 +52,60 @@ const Img = styled.img`
   height: 2rem;
 `;
 
-const Calculate = styled.section`
+const Calculate = styled.button`
   display: flex;
   justify-content: center;
   font-size: 1rem;
+  font-weight: bold;
+  color: #383854;
   max-width: 50%;
   background-color: rgba(0, 0, 0, 0.25);
   border: 0.05rem rgba(0, 0, 0, 0.5) solid;
-  padding: 0.5rem 7.5rem;
+  padding: 0.5rem 10rem;
   border-radius: 1rem;
+  margin: 2rem 0;
+  box-shadow: 0.2rem 0.2rem 0.3rem #888888;
+`;
+
+const ResultsContainer = styled.section`
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+`;
+
+const Results = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #383854;
+  border-radius: 1rem;
+  padding: 1rem;
+  color: white;
+  margin: 0 1rem;
+`;
+
+const Numbers = styled.section`
+  background-color: rgba(255, 255, 255, 0.5);
+  border: white 0.05rem solid;
+  border-radius: 0.5rem;
+  width: 7rem;
+  color: white;
+  margin: 1rem 0 0 0;
+`;
+
+const Reset = styled.button`
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #383854;
+  max-width: 50%;
+  background-color: rgba(255, 0, 0, 0.25);
+  border: 0.05rem rgba(0, 0, 0, 0.5) solid;
+  padding: 0.5rem 3.75rem;
+  border-radius: 1rem;
+  margin: 2rem 0;
+  box-shadow: 0.2rem 0.2rem 0.3rem #888888;
 `;
 
 const Calculator = () => (
@@ -61,7 +113,7 @@ const Calculator = () => (
     <SubTitle>
       Please select your daily activity and choose the amout by clicking on it again
     </SubTitle>
-    <Content>
+    <Activitys>
       <IconContainer>
         <Icon>
           <Img src="/bottle.png" alt="" />
@@ -85,7 +137,18 @@ const Calculator = () => (
         </Icon>
       </IconContainer>
       <Calculate>CALCULATE</Calculate>
-    </Content>
+    </Activitys>
+    <ResultsContainer>
+      <Results>
+        <ResultsTitle>Your cost</ResultsTitle>
+        <Numbers>5</Numbers>
+      </Results>
+      <Results>
+        <ResultsTitle>LITERS</ResultsTitle>
+        <Numbers>5</Numbers>
+      </Results>
+    </ResultsContainer>
+    <Reset>RESET</Reset>
   </Container>
 );
 
