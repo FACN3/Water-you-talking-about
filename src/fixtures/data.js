@@ -1,12 +1,12 @@
 module.exports = {
   activities: [
     {
-      name: 'toilet',
+      name: 'Toilet',
       liters: 4.5,
       cost: 0.04005,
     },
     {
-      name: 'shower',
+      name: 'Shower',
       liters: 8,
       cost: 0.0712,
     },
