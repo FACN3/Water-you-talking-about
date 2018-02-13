@@ -22,19 +22,6 @@ const Img = styled.img`
   width: 100%;
 `;
 
-// const Info = styled.h2`
-//   font-size: 1rem;
-//   width: 100%;
-//
-//   @media only screen and (max-width: 700px) {
-//     font-size: 0.5rem;
-//   }
-//
-//   @media only screen and (max-width: 420px) {
-//     width: 100%;
-//   }
-// `;
-
 const Statistics = () => (
   <Container>
     <ImgContainer>
