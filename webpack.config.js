@@ -20,6 +20,10 @@ module.exports = {
           presets: ['env', 'react'],
         },
       },
+      {
+        test: /\.png$/,
+        loader: 'file-loader?name=[name].[ext]',
+      },
     ],
   },
   plugins: [

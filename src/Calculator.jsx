@@ -5,7 +5,6 @@ const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   color: #383854;
   margin: 2rem 0 2rem 0;
   font-size: 2rem;
@@ -14,15 +13,6 @@ const Container = styled.section`
 const SubTitle = styled.h2`
   font-size: 1rem;
   color: #383854;
-`;
-
-const Submit = styled.section`
-  font-size: 1rem;
-  max-width: 50%;
-  background-color: rgba(0, 0, 0, 0.25);
-  border: 0.05rem rgba(0, 0, 0, 0.5) solid;
-  padding: 0.5rem 7.5rem;
-  border-radius: 0.5rem;
 `;
 
 const Content = styled.section`
@@ -41,12 +31,29 @@ const IconContainer = styled.section`
   margin: 1rem 0 0 0;
 `;
 
-const Icon = styled.div`
+const Icon = styled.section`
   border-radius: 1rem;
   color: white;
   background-color: #383854;
+  box-shadow: 0.2rem 0.2rem 0.3rem #888888;
   margin: 1rem 1rem;
   padding: 1rem 2rem 5rem 2rem;
+`;
+
+const Img = styled.img`
+  width: 2rem;
+  height: 2rem;
+`;
+
+const Calculate = styled.section`
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  max-width: 50%;
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 0.05rem rgba(0, 0, 0, 0.5) solid;
+  padding: 0.5rem 7.5rem;
+  border-radius: 1rem;
 `;
 
 const Calculator = () => (
@@ -57,27 +64,27 @@ const Calculator = () => (
     <Content>
       <IconContainer>
         <Icon>
-          <i className="fa fa-bath" />
+          <Img src="/bottle.png" alt="" />
         </Icon>
         <Icon>
-          <i className="fa fa-bath" />
+          <Img src="/glass.png" alt="" />
         </Icon>
         <Icon>
-          <i className="fa fa-bath" />
+          <Img src="/flush.png" alt="" />
         </Icon>
       </IconContainer>
       <IconContainer>
         <Icon>
-          <i className="fa fa-bath" />
+          <Img src="/washing-hands.png" alt="" />
         </Icon>
         <Icon>
-          <i className="fa fa-bath" />
+          <Img src="/shower.png" alt="" />
         </Icon>
         <Icon>
-          <i className="fa fa-bath" />
+          <Img src="/plumbing-pipe.png" alt="" />
         </Icon>
       </IconContainer>
-      <Submit>Calculate</Submit>
+      <Calculate>CALCULATE</Calculate>
     </Content>
   </Container>
 );

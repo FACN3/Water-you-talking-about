@@ -6,6 +6,7 @@ import Calculator from './Calculator';
 import NavBar from './NavBar';
 import './styles/reset';
 import './styles/style';
+import './styles/images';
 
 const Container = styled.div``;
 
