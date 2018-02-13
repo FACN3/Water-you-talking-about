@@ -145,14 +145,7 @@ class NavBar extends Component {
         </Nav>
         <DropNav>
           <DropdownMenu show={this.state.menuClick} id="button">
-            <HLink
-              onClick={() =>
-                this.setState({
-                  menuClick: !this.state.menuClick,
-                })
-              }
-              to="/"
-            >
+            <HLink onClick={this.DropMenuToggle} to="/">
               Home
             </HLink>
             <HLink onClick={this.DropMenuToggle} to="/calculator">
