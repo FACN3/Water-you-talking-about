@@ -5,10 +5,8 @@ export default function calculator(data, userChoice) {
     (acc, cur) => {
       data.activities.forEach((activity) => {
         if (activity.name === cur) {
-          const liters = activity.liters * userChoice[cur];
-          acc.liters += liters;
-          const cost = activity.cost * userChoice[cur];
-          acc.cost += cost;
+          acc.liters += activity.liters * userChoice[cur];
+          acc.cost += activity.cost * userChoice[cur];
         }
       });
       return acc;
