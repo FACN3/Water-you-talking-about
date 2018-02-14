@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.section`
-  flex-direction: column;
   text-align: center;
   margin: 2rem;
   border: #383854 solid 0.2rem;
