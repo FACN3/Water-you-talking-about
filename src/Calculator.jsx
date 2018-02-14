@@ -87,7 +87,7 @@ const Calculate = styled.button`
   font-weight: bold;
   color: #383854;
   max-width: 50%;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(255, 221, 0, 0.5);
   border: 0.05rem rgba(0, 0, 0, 0.5) solid;
   padding: 0.5rem 10rem;
   border-radius: 0.5rem;
@@ -179,7 +179,7 @@ const Calculator = () => (
         <Numbers>5</Numbers>
       </Results>
       <Results>
-        <ResultsTitle>LITERS</ResultsTitle>
+        <ResultsTitle>Liters</ResultsTitle>
         <Numbers>5</Numbers>
       </Results>
     </ResultsContainer>
