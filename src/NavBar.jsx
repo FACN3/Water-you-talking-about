@@ -24,15 +24,15 @@ const Title = styled.h1`
   border: 0.1rem solid #a3bdff;
   border-radius: 0.5rem;
   color: #a3bdff;
-  font-size: 1.5rem;
-  width: 20rem;
+  font-size: 1rem;
+  width: 15rem;
   margin: 1rem;
   padding: 0 1rem 0.2rem;
 
   @media only screen and (max-width: 700px) {
-    font-size: 1rem;
+    font-size: 0.8rem;
     padding: 0;
-    width: 50%;
+    width: 10rem;
   }
 
   @media only screen and (max-width: 420px) {
