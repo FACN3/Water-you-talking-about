@@ -12,7 +12,6 @@ const Info = styled.h2`
   width: 75%;
   font-size: 1rem;
   text-align: center;
-  margin: 0 0 1rem 0;
   width: 100%;
   color: #383854;
 
@@ -23,6 +22,38 @@ const Info = styled.h2`
   @media only screen and (max-width: 420px) {
     font-size: 0.5rem;
     width: 75%;
+  }
+`;
+
+const SubInfo = styled.h2`
+  width: 75%;
+  font-size: 0.5rem;
+  text-align: center;
+  width: 100%;
+  color: #383854;
+
+  @media only screen and (max-width: 700px) {
+    font-size: 0.4rem;
+  }
+
+  @media only screen and (max-width: 420px) {
+    display: none;
+  }
+`;
+
+const Link = styled.a`
+  width: 75%;
+  font-size: 0.5rem;
+  text-align: center;
+  margin: 0 0 1rem 0;
+  width: 100%;
+
+  @media only screen and (max-width: 700px) {
+    font-size: 0.4rem;
+  }
+
+  @media only screen and (max-width: 420px) {
+    margin: 0.5rem 0 1rem 0;
   }
 `;
 
@@ -69,7 +100,11 @@ const ImgContainer = styled.div``;
 
 const Statistics = () => (
   <Container>
-    <Info>In the graph below, you will see the water price changes over the years</Info>
+    <Info>In the graph below, you will see the water Shekel value changes over the years</Info>
+    <SubInfo>The info below has been extracted from the official goverment website</SubInfo>
+    <Link href="http://www.water.gov.il/Hebrew/Rates/Pages/Rates.aspx" target="_blank">
+      Click here for the source
+    </Link>
     <StatsContainer>
       <Title>Price Charts</Title>
       <ImgContainer>
