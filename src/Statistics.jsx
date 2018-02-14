@@ -8,9 +8,7 @@ const Container = styled.section`
   border-radius: 0rem 0rem 1rem 1rem;
 `;
 
-const ImgContainer = styled.div`
-  color: white;
-`;
+const ImgContainer = styled.div``;
 
 const Img = styled.img`
   width: 75%;
@@ -25,7 +23,6 @@ const Img = styled.img`
 `;
 
 const InfoContainer = styled.div`
-  color: white;
   padding: : 1rem 0rem 1rem 0rem;
 `;
 
