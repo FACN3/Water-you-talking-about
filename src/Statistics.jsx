@@ -7,26 +7,55 @@ const Container = styled.section`
   align-items: center;
   text-align: center;
   color: #383854;
-  margin: 4rem 0 2rem 0;
-  font-size: 2rem;
+  margin: 2rem;
+  border: #383854 solid 0.05rem;
+  border-radius: 0rem 0rem 1rem 1rem;
 `;
 
 const ImgContainer = styled.div`
   color: white;
-  border: #383854 solid 0.5rem;
-  border-radius: 1rem;
-  margin: 0 1rem 0 1rem;
 `;
 
 const Img = styled.img`
+  width: 75%;
+  @media only screen and (max-width: 700px) {
+    width: 85%;
+    margin: 0rem;
+  }
+
+  @media only screen and (max-width: 420px) {
+    width: 100;
+  }
+`;
+
+const InfoContainer = styled.div`
+  color: white;
+  padding: : 1rem 0rem 1rem 0rem;
+`;
+
+const Title = styled.h1`
+  font-size: 1rem;
   width: 100%;
+  background-color: #383854;
+  color: white;
+
+  @media only screen and (max-width: 700px) {
+    font-size: 1.1rem;
+  }
+
+  @media only screen and (max-width: 420px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const Statistics = () => (
   <Container>
-    <ImgContainer>
-      <Img src="/Graph.png" />
-    </ImgContainer>
+    <InfoContainer>
+      <Title>Price Charts</Title>
+      <ImgContainer>
+        <Img src="/Graph.png" />
+      </ImgContainer>
+    </InfoContainer>
   </Container>
 );
 
