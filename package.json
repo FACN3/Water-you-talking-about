@@ -7,7 +7,7 @@
     "dev": "webpack-dev-server --open --host 0.0.0.0 --config ./webpack.config.js",
     "build": "webpack --config webpack.config.js",
     "lint": "eslint **/*.{js,jsx} --quiet",
-    "test": "babel-tape-runner tests/test.js"
+    "test": "babel-tape-runner tests/test.js | tap-spec"
   },
   "repository": {
     "type": "git",
@@ -58,6 +58,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.6.1",
     "pre-commit": "^1.2.2",
+    "tap-spec": "^4.1.1",
     "tape": "^4.8.0"
   }
 }
