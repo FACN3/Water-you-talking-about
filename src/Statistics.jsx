@@ -2,13 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.section`
-  display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: center;
-  color: #383854;
   margin: 2rem;
-  border: #383854 solid 0.05rem;
+  border: #383854 solid 0.2rem;
   border-radius: 0rem 0rem 1rem 1rem;
 `;
 
@@ -18,9 +15,9 @@ const ImgContainer = styled.div`
 
 const Img = styled.img`
   width: 75%;
+
   @media only screen and (max-width: 700px) {
     width: 85%;
-    margin: 0rem;
   }
 
   @media only screen and (max-width: 420px) {
@@ -40,11 +37,11 @@ const Title = styled.h1`
   color: white;
 
   @media only screen and (max-width: 700px) {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 
   @media only screen and (max-width: 420px) {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
   }
 `;
 
