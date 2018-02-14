@@ -151,24 +151,24 @@ const Calculator = () => (
     <Activitys>
       <IconContainer>
         <Icon>
-          <Img src="/bottle.png" alt="" />
+          <Img src="/bottle.png" alt="bottle" />
         </Icon>
         <Icon>
-          <Img src="/glass.png" alt="" />
+          <Img src="/glass.png" alt="glass" />
         </Icon>
         <Icon>
-          <Img src="/flush.png" alt="" />
+          <Img src="/flush.png" alt="flush" />
         </Icon>
       </IconContainer>
       <IconContainer>
         <Icon>
-          <Img src="/washing-hands.png" alt="" />
+          <Img src="/washing-hands.png" alt="washing hands" />
         </Icon>
         <Icon>
-          <Img src="/shower.png" alt="" />
+          <Img src="/shower.png" alt="shower" />
         </Icon>
         <Icon>
-          <Img src="/plumbing-pipe.png" alt="" />
+          <Img src="/plumbing-pipe.png" alt="plumbing pipe" />
         </Icon>
       </IconContainer>
       <Calculate>CALCULATE</Calculate>
