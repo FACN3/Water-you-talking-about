@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
-import calculatorLogic from './lib/Calculator';
 
 // styling
 
@@ -61,7 +60,7 @@ const IconContainer = styled.section`
 const Icon = styled.button`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  align-items: center;
   border-radius: 1rem;
   color: white;
   background-color: #383854;
@@ -69,6 +68,7 @@ const Icon = styled.button`
   box-shadow: 0.2rem 0.2rem 0.3rem #888888;
   margin: 0 0.5rem;
   padding: 2rem 2rem;
+  height: 4rem;
 
   @media only screen and (max-width: 700px) {
     padding: 1rem 1rem;
@@ -81,6 +81,11 @@ const Icon = styled.button`
 const Img = styled.img`
   width: 2rem;
   height: 2rem;
+`;
+
+const Value = styled.h3`
+  font-weight: bold;
+  margin: 0.25rem 0 0 0;
 `;
 
 const Calculate = styled.button`
@@ -146,15 +151,58 @@ const Numbers = styled.section`
   }
 `;
 
+const Pic1 = styled.section`
+  display: ${props => props.show};
+`;
+const Pic2 = styled.section`
+  display: ${props => props.show};
+`;
+const Pic3 = styled.section`
+  display: ${props => props.show};
+`;
+const Pic4 = styled.section`
+  display: ${props => props.show};
+`;
+const Pic5 = styled.section`
+  display: ${props => props.show};
+`;
+const Pic6 = styled.section`
+  display: ${props => props.show};
+`;
+
 // Functionality
 
-// App
-
-class Calculator extends calculatorLogic {
+class Calculator extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    /* eslint-disable */
+    console.log('props is:', this.props);
+    this.state = {
+      quantity: 0,
+      duration: 0,
+      show: 'none',
+    };
+    this.AddQuantity = this.AddQuantity.bind(this);
+    this.AddDuration = this.AddDuration.bind(this);
+    console.log('quantity is', this.state.quantity);
+    console.log('duration is', this.state.duration, 'mins');
   }
+
+  AddQuantity() {
+    this.setState({
+      quantity: this.state.quantity + 1,
+      show: (this.state.show = 'normal'),
+    });
+  }
+
+  AddDuration() {
+    this.setState({
+      duration: this.state.duration + 1,
+      show: (this.state.show = 'normal'),
+    });
+  }
+
+  // App
 
   render() {
     return (
@@ -164,25 +212,43 @@ class Calculator extends calculatorLogic {
         </SubTitle>
         <Activitys>
           <IconContainer>
-            <Icon>
+            <Icon onClick={() => this.AddQuantity('Toilet')}>
               <Img src="/bottle.png" alt="bottle" />
+              <Pic1 show={this.state.show}>
+                <Value>x {this.state.quantity}</Value>
+              </Pic1>
             </Icon>
-            <Icon>
+            <Icon onClick={this.AddQuantity}>
               <Img src="/glass.png" alt="glass" />
+              <Pic2 show={this.state.show}>
+                <Value>x {this.state.quantity}</Value>
+              </Pic2>
             </Icon>
-            <Icon>
+            <Icon onClick={this.AddQuantity}>
               <Img src="/flush.png" alt="flush" />
+              <Pic3 show={this.state.show}>
+                <Value>x {this.state.quantity}</Value>
+              </Pic3>
             </Icon>
           </IconContainer>
           <IconContainer>
-            <Icon>
+            <Icon onClick={this.AddDuration}>
               <Img src="/washing-hands.png" alt="washing hands" />
+              <Pic4 show={this.state.show}>
+                <Value>{this.state.duration} Mins</Value>
+              </Pic4>
             </Icon>
-            <Icon>
+            <Icon onClick={this.AddDuration}>
               <Img src="/shower.png" alt="shower" />
+              <Pic5 show={this.state.show}>
+                <Value>{this.state.duration} Mins</Value>
+              </Pic5>
             </Icon>
-            <Icon>
+            <Icon onClick={this.AddDuration}>
               <Img src="/plumbing-pipe.png" alt="plumbing pipe" />
+              <Pic6 show={this.state.show}>
+                <Value>{this.state.duration} Mins</Value>
+              </Pic6>
             </Icon>
           </IconContainer>
           <Calculate>CALCULATE</Calculate>

@@ -1,6 +1,6 @@
 import test from 'tape';
 import data from '../src/fixtures/data';
-import calculator from '../src/lib/calculator';
+import calculator from '../src/lib/Calculator';
 
 test('2 Toilets should lead to 9 liters and 0.0801', (t) => {
   const expected = {
