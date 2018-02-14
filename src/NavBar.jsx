@@ -12,7 +12,7 @@ const MenuContainer = styled.div`
 
 const Nav = styled.nav`
   display: flex;
-  max-height: 3rem;
+  max-height: 2rem;
   background-color: #383854;
   width: 100%;
 `;
@@ -22,7 +22,7 @@ const Title = styled.h1`
   justify-content: center;
   text-align: center;
   border: 0.1rem solid #a3bdff;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   color: #a3bdff;
   font-size: 1.5rem;
   width: 20rem;
@@ -32,12 +32,12 @@ const Title = styled.h1`
   @media only screen and (max-width: 700px) {
     font-size: 1rem;
     padding: 0;
-    width: 11.5em;
+    width: 50%;
   }
 
   @media only screen and (max-width: 420px) {
     font-size: 0.6rem;
-    padding: 0 0.5rem 0.2rem;
+    padding: 0.2rem;
   }
 `;
 
@@ -104,7 +104,7 @@ const HLink = styled(Link)`
     padding: 0 1rem 0 0;
   }
   @media only screen and (max-width: 420px) {
-    padding: 0 0.2rem;
+    padding: 0;
     font-size: 0.8rem;
   }
 `;

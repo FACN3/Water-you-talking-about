@@ -9,16 +9,21 @@ const Container = styled.section`
   color: #383854;
   margin: 2rem 0 2rem 0;
   font-size: 2rem;
+  @media only screen and (max-width: 420px) {
+    margin: 0.25rem 0;
+  }
 `;
 
 const SubTitle = styled.h2`
   font-size: 1rem;
+  width: 50%;
   color: #383854;
-`;
-
-const ResultsTitle = styled.h2`
-  font-size: 1.5rem;
-  color: white;
+  @media only screen and (max-width: 700px) {
+    font-size: 0.75rem;
+  }
+  @media only screen and (max-width: 420px) {
+    width: 75%;
+  }
 `;
 
 const Activitys = styled.section`
@@ -29,15 +34,28 @@ const Activitys = styled.section`
   color: #383854;
   max-width: 50%;
   border-radius: 1rem;
+
+  @media only screen and (max-width: 700px) {
+    align-items: center;
+    padding: 1rem 1rem;
+  }
+
+  @media only screen and (max-width: 420px) {
+    padding: 0;
+  }
 `;
 
 const IconContainer = styled.section`
   display: flex;
   justify-content: center;
   margin: 1rem 0 0 0;
+
+  @media only screen and (max-width: 420px) {
+    margin: 0;
+  }
 `;
 
-const Icon = styled.section`
+const Icon = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -48,6 +66,13 @@ const Icon = styled.section`
   box-shadow: 0.2rem 0.2rem 0.3rem #888888;
   margin: 0 0.5rem;
   padding: 2rem 2rem;
+
+  @media only screen and (max-width: 700px) {
+    padding: 1rem 1rem;
+  }
+  @media only screen and (max-width: 420px) {
+    margin: 0.5rem;
+  }
 `;
 
 const Img = styled.img`
@@ -65,9 +90,14 @@ const Calculate = styled.button`
   background-color: rgba(0, 0, 0, 0.25);
   border: 0.05rem rgba(0, 0, 0, 0.5) solid;
   padding: 0.5rem 10rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   margin: 2rem 0;
   box-shadow: 0.2rem 0.2rem 0.3rem #888888;
+
+  @media only screen and (max-width: 700px) {
+    padding: 0.25rem 6rem;
+    margin: 1rem 0;
+  }
 `;
 
 const ResultsContainer = styled.section`
@@ -85,6 +115,19 @@ const Results = styled.section`
   padding: 1rem;
   color: white;
   margin: 0 1rem;
+
+  @media only screen and (max-width: 700px) {
+    padding: 0.5rem;
+  }
+`;
+
+const ResultsTitle = styled.h2`
+  font-size: 1.5rem;
+  color: white;
+
+  @media only screen and (max-width: 700px) {
+    font-size: 0.75rem;
+  }
 `;
 
 const Numbers = styled.section`
@@ -94,21 +137,10 @@ const Numbers = styled.section`
   width: 7rem;
   color: white;
   margin: 1rem 0 0 0;
-`;
-
-const Reset = styled.button`
-  display: flex;
-  justify-content: center;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #383854;
-  max-width: 50%;
-  background-color: rgba(255, 0, 0, 0.25);
-  border: 0.05rem rgba(0, 0, 0, 0.5) solid;
-  padding: 0.5rem 3.75rem;
-  border-radius: 1rem;
-  margin: 2rem 0;
-  box-shadow: 0.2rem 0.2rem 0.3rem #888888;
+  @media only screen and (max-width: 700px) {
+    width: 4rem;
+    font-size: 1rem;
+  }
 `;
 
 const Calculator = () => (
@@ -151,7 +183,6 @@ const Calculator = () => (
         <Numbers>5</Numbers>
       </Results>
     </ResultsContainer>
-    <Reset>RESET</Reset>
   </Container>
 );
 
