@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import calculatorLogic from './lib/Calculator';
+
+// styling
 
 const Container = styled.section`
   display: flex;
@@ -143,47 +146,59 @@ const Numbers = styled.section`
   }
 `;
 
-const Calculator = () => (
-  <Container>
-    <SubTitle>
-      Please select your daily activity and choose the amout by clicking on it again
-    </SubTitle>
-    <Activitys>
-      <IconContainer>
-        <Icon>
-          <Img src="/bottle.png" alt="bottle" />
-        </Icon>
-        <Icon>
-          <Img src="/glass.png" alt="glass" />
-        </Icon>
-        <Icon>
-          <Img src="/flush.png" alt="flush" />
-        </Icon>
-      </IconContainer>
-      <IconContainer>
-        <Icon>
-          <Img src="/washing-hands.png" alt="washing hands" />
-        </Icon>
-        <Icon>
-          <Img src="/shower.png" alt="shower" />
-        </Icon>
-        <Icon>
-          <Img src="/plumbing-pipe.png" alt="plumbing pipe" />
-        </Icon>
-      </IconContainer>
-      <Calculate>CALCULATE</Calculate>
-    </Activitys>
-    <ResultsContainer>
-      <Results>
-        <ResultsTitle>Your cost</ResultsTitle>
-        <Numbers>5</Numbers>
-      </Results>
-      <Results>
-        <ResultsTitle>Liters</ResultsTitle>
-        <Numbers>5</Numbers>
-      </Results>
-    </ResultsContainer>
-  </Container>
-);
+// Functionality
 
+// App
+
+class Calculator extends calculatorLogic {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  render() {
+    return (
+      <Container>
+        <SubTitle>
+          Please select your daily activity and choose the amout by clicking on it again
+        </SubTitle>
+        <Activitys>
+          <IconContainer>
+            <Icon>
+              <Img src="/bottle.png" alt="bottle" />
+            </Icon>
+            <Icon>
+              <Img src="/glass.png" alt="glass" />
+            </Icon>
+            <Icon>
+              <Img src="/flush.png" alt="flush" />
+            </Icon>
+          </IconContainer>
+          <IconContainer>
+            <Icon>
+              <Img src="/washing-hands.png" alt="washing hands" />
+            </Icon>
+            <Icon>
+              <Img src="/shower.png" alt="shower" />
+            </Icon>
+            <Icon>
+              <Img src="/plumbing-pipe.png" alt="plumbing pipe" />
+            </Icon>
+          </IconContainer>
+          <Calculate>CALCULATE</Calculate>
+        </Activitys>
+        <ResultsContainer>
+          <Results>
+            <ResultsTitle>Your cost</ResultsTitle>
+            <Numbers>5</Numbers>
+          </Results>
+          <Results>
+            <ResultsTitle>Liters</ResultsTitle>
+            <Numbers>5</Numbers>
+          </Results>
+        </ResultsContainer>
+      </Container>
+    );
+  }
+}
 export default Calculator;

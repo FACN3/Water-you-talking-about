@@ -1,6 +1,6 @@
 // userChoice is how many activities have been clicked
 
-export default function calculator(data, userChoice) {
+export default function calculatorLogic(data, userChoice) {
   return Object.keys(userChoice).reduce(
     (acc, cur) => {
       data.activities.forEach((activity) => {
