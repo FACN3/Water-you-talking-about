@@ -1,5 +1,8 @@
 // userChoice is how many activities have been clicked
 
+// .toPrecision(6) <= This limits the digits to 0.12345
+// Don't delete, still need to figure out where to put it
+
 export default function calculatorLogic(data, userChoice) {
   return Object.keys(userChoice).reduce(
     (acc, cur) => {
@@ -14,4 +17,3 @@ export default function calculatorLogic(data, userChoice) {
     { liters: 0, cost: 0 },
   );
 }
-// .toPrecision(6) <= This limits the digits to 0.12345 (Don't delete, still need to figure out where to put it)
