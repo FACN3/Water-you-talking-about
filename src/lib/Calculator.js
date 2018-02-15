@@ -14,3 +14,4 @@ export default function calculatorLogic(data, userChoice) {
     { liters: 0, cost: 0 },
   );
 }
+// .toPrecision(6) <= This limits the digits to 0.12345 (Don't delete, still need to figure out where to put it)

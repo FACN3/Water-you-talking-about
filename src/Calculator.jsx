@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import calculatorLogic from './lib/Calculator';
+import data from './fixtures/data';
 
 // styling
 
@@ -178,22 +180,35 @@ class Calculator extends Component {
     /* eslint-disable */
     console.log('props is:', this.props);
     this.state = {
-      Toilet: 0,
-      Shower: 0,
-      'Faucet tap': 0,
-      'Washing hands': 0,
-      Cup: 0,
-      Bottle: 0,
+      userChoices: {
+        Toilet: 0,
+        Shower: 0,
+        'Faucet tap': 0,
+        'Washing hands': 0,
+        Cup: 0,
+        Bottle: 0,
+      },
+      cost: 0,
+      liters: 0,
       show: 'none',
     };
     this.handleClick = this.handleClick.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleClick(userChoice) {
     this.setState({
-      [userChoice]: this.state[userChoice] + 1,
+      userChoices: {
+        ...this.state.userChoices,
+        [userChoice]: this.state.userChoices[userChoice] + 1,
+      },
       show: (this.state.show = 'normal'),
     });
+  }
+
+  handleSubmit() {
+    const { cost, liters } = calculatorLogic(data, this.state.userChoices);
+    this.setState({ cost, liters });
   }
 
   // App
@@ -209,19 +224,19 @@ class Calculator extends Component {
             <Icon onClick={() => this.handleClick('Bottle')}>
               <Img src="/bottle.png" alt="bottle" />
               <Pic1 show={this.state.show}>
-                <Value>x {this.state.Bottle}</Value>
+                <Value>x {this.state.userChoices['Bottle']}</Value>
               </Pic1>
             </Icon>
             <Icon onClick={() => this.handleClick('Cup')}>
               <Img src="/glass.png" alt="glass" />
               <Pic2 show={this.state.show}>
-                <Value>x {this.state.Cup}</Value>
+                <Value>x {this.state.userChoices['Cup']}</Value>
               </Pic2>
             </Icon>
             <Icon onClick={() => this.handleClick('Toilet')}>
               <Img src="/flush.png" alt="flush" />
               <Pic3 show={this.state.show}>
-                <Value>x {this.state.Toilet}</Value>
+                <Value>x {this.state.userChoices['Toilet']}</Value>
               </Pic3>
             </Icon>
           </IconContainer>
@@ -229,32 +244,32 @@ class Calculator extends Component {
             <Icon onClick={() => this.handleClick('Washing hands')}>
               <Img src="/washing-hands.png" alt="washing hands" />
               <Pic4 show={this.state.show}>
-                <Value>{this.state['Washing hands']} Mins</Value>
+                <Value>{this.state.userChoices['Washing hands']} Mins</Value>
               </Pic4>
             </Icon>
             <Icon onClick={() => this.handleClick('Shower')}>
               <Img src="/shower.png" alt="shower" />
               <Pic5 show={this.state.show}>
-                <Value>{this.state.Shower} Mins</Value>
+                <Value>{this.state.userChoices['Shower']} Mins</Value>
               </Pic5>
             </Icon>
             <Icon onClick={() => this.handleClick('Faucet tap')}>
               <Img src="/plumbing-pipe.png" alt="plumbing pipe" />
               <Pic6 show={this.state.show}>
-                <Value>{this.state['Faucet tap']} Mins</Value>
+                <Value>{this.state.userChoices['Faucet tap']} Mins</Value>
               </Pic6>
             </Icon>
           </IconContainer>
-          <Calculate>CALCULATE</Calculate>
+          <Calculate onClick={() => this.handleSubmit()}>CALCULATE</Calculate>
         </Activitys>
         <ResultsContainer>
           <Results>
             <ResultsTitle>Your cost</ResultsTitle>
-            <Numbers>5</Numbers>
+            <Numbers>{this.state.cost}</Numbers>
           </Results>
           <Results>
             <ResultsTitle>Liters</ResultsTitle>
-            <Numbers>5</Numbers>
+            <Numbers>{this.state.liters}</Numbers>
           </Results>
         </ResultsContainer>
       </Container>
