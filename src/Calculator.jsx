@@ -178,26 +178,20 @@ class Calculator extends Component {
     /* eslint-disable */
     console.log('props is:', this.props);
     this.state = {
-      quantity: 0,
-      duration: 0,
+      Toilet: 0,
+      Shower: 0,
+      'Faucet tap': 0,
+      'Washing hands': 0,
+      Cup: 0,
+      Bottle: 0,
       show: 'none',
     };
-    this.AddQuantity = this.AddQuantity.bind(this);
-    this.AddDuration = this.AddDuration.bind(this);
-    console.log('quantity is', this.state.quantity);
-    console.log('duration is', this.state.duration, 'mins');
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  AddQuantity() {
+  handleClick(data) {
     this.setState({
-      quantity: this.state.quantity + 1,
-      show: (this.state.show = 'normal'),
-    });
-  }
-
-  AddDuration() {
-    this.setState({
-      duration: this.state.duration + 1,
+      [data]: this.state[data] + 1,
       show: (this.state.show = 'normal'),
     });
   }
@@ -212,42 +206,42 @@ class Calculator extends Component {
         </SubTitle>
         <Activitys>
           <IconContainer>
-            <Icon onClick={() => this.AddQuantity('Toilet')}>
+            <Icon onClick={() => this.handleClick('Bottle')}>
               <Img src="/bottle.png" alt="bottle" />
               <Pic1 show={this.state.show}>
-                <Value>x {this.state.quantity}</Value>
+                <Value>x {this.state.Bottle}</Value>
               </Pic1>
             </Icon>
-            <Icon onClick={this.AddQuantity}>
+            <Icon onClick={() => this.handleClick('Cup')}>
               <Img src="/glass.png" alt="glass" />
               <Pic2 show={this.state.show}>
-                <Value>x {this.state.quantity}</Value>
+                <Value>x {this.state.Cup}</Value>
               </Pic2>
             </Icon>
-            <Icon onClick={this.AddQuantity}>
+            <Icon onClick={() => this.handleClick('Toilet')}>
               <Img src="/flush.png" alt="flush" />
               <Pic3 show={this.state.show}>
-                <Value>x {this.state.quantity}</Value>
+                <Value>x {this.state.Toilet}</Value>
               </Pic3>
             </Icon>
           </IconContainer>
           <IconContainer>
-            <Icon onClick={this.AddDuration}>
+            <Icon onClick={() => this.handleClick('Washing hands')}>
               <Img src="/washing-hands.png" alt="washing hands" />
               <Pic4 show={this.state.show}>
-                <Value>{this.state.duration} Mins</Value>
+                <Value>{this.state['Washing hands']} Mins</Value>
               </Pic4>
             </Icon>
-            <Icon onClick={this.AddDuration}>
+            <Icon onClick={() => this.handleClick('Shower')}>
               <Img src="/shower.png" alt="shower" />
               <Pic5 show={this.state.show}>
-                <Value>{this.state.duration} Mins</Value>
+                <Value>{this.state.Shower} Mins</Value>
               </Pic5>
             </Icon>
-            <Icon onClick={this.AddDuration}>
+            <Icon onClick={() => this.handleClick('Faucet tap')}>
               <Img src="/plumbing-pipe.png" alt="plumbing pipe" />
               <Pic6 show={this.state.show}>
-                <Value>{this.state.duration} Mins</Value>
+                <Value>{this.state['Faucet tap']} Mins</Value>
               </Pic6>
             </Icon>
           </IconContainer>

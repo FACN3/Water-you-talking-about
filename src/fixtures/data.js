@@ -16,6 +16,11 @@ module.exports = {
       cost: 0.0356,
     },
     {
+      name: 'Washing hands',
+      liters: 4,
+      cost: 0.0356,
+    },
+    {
       name: 'Washing machine',
       liters: 6.5,
       cost: 0.05785,
@@ -29,6 +34,11 @@ module.exports = {
       name: 'Bottle',
       liters: 2,
       cost: 0.0178,
+    },
+    {
+      name: 'Cup',
+      liters: 0.25,
+      cost: 0.002225,
     },
   ],
 };
