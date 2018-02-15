@@ -189,9 +189,9 @@ class Calculator extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(data) {
+  handleClick(userChoice) {
     this.setState({
-      [data]: this.state[data] + 1,
+      [userChoice]: this.state[userChoice] + 1,
       show: (this.state.show = 'normal'),
     });
   }
