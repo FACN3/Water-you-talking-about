@@ -11,7 +11,7 @@ const Container = styled.section`
   text-align: center;
   align-items: center;
   color: #383854;
-  margin: 2rem 0 2rem 0;
+  margin: 2rem 0;
   font-size: 2rem;
   @media only screen and (max-width: 420px) {
     margin: 0.25rem 0;
