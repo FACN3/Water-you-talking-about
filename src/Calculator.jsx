@@ -62,14 +62,14 @@ const IconContainer = styled.section`
 const Icon = styled.button`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   border-radius: 1rem;
   color: white;
   background-color: #383854;
   border: 0.05rem rgba(255, 255, 255, 0.75) solid;
   box-shadow: 0.2rem 0.2rem 0.3rem #888888;
   margin: 0 0.5rem;
-  padding: 2rem 2rem;
+  padding: 3rem;
   height: 4rem;
 
   @media only screen and (max-width: 700px) {
