@@ -41,7 +41,7 @@ const Activitys = styled.section`
 
   @media only screen and (max-width: 700px) {
     align-items: center;
-    padding: 1rem 1rem;
+    padding: 1rem;
   }
 
   @media only screen and (max-width: 420px) {
@@ -52,7 +52,7 @@ const Activitys = styled.section`
 const IconContainer = styled.section`
   display: flex;
   justify-content: center;
-  margin: 1rem 0 0 0;
+  margin-top: 1rem;
 
   @media only screen and (max-width: 420px) {
     margin: 0;
@@ -73,7 +73,7 @@ const Icon = styled.button`
   height: 4rem;
 
   @media only screen and (max-width: 700px) {
-    padding: 1rem 1rem;
+    padding: 1rem;
   }
   @media only screen and (max-width: 420px) {
     margin: 0.5rem;
@@ -98,7 +98,7 @@ const Calculate = styled.button`
   justify-content: center;
   font-size: 1rem;
   font-weight: bold;
-  color: #383854;
+  color: #525010;
   max-width: 50%;
   background-color: rgba(255, 221, 0, 0.5);
   border: 0.05rem rgba(0, 0, 0, 0.5) solid;
