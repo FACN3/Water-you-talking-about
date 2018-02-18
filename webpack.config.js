@@ -8,6 +8,9 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/',
   },
+  stats: {
+    errorDetails: true,
+  },
   devtool: 'inline-source-map',
   devServer: { contentBase: './dist', historyApiFallback: true },
   module: {
@@ -19,6 +22,10 @@ module.exports = {
         query: {
           presets: ['env', 'react'],
         },
+      },
+      {
+        test: /\.png$/,
+        loader: 'file-loader?name=[name].[ext]',
       },
     ],
   },
