@@ -91,7 +91,6 @@ const Value = styled.h3`
   opacity: ${props => props.shows};
   align-self: center;
   font-weight: bold;
-  width: 2.1rem;
   margin-top: 0.25rem;
 `;
 
