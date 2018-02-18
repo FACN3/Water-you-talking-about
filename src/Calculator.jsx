@@ -90,7 +90,8 @@ const Value = styled.h3`
   opacity: ${props => props.shows};
   align-self: center;
   font-weight: bold;
-  margin: 0.25rem 0 0 0;
+  width: 2.1rem;
+  margin-top: 0.25rem;
 `;
 
 const Calculate = styled.button`
@@ -161,8 +162,6 @@ const Numbers = styled.section`
 class Calculator extends Component {
   constructor(props) {
     super(props);
-    /* eslint-disable */
-    console.log('props is:', this.props);
     this.state = {
       userChoices: {
         Toilet: 0,
@@ -184,9 +183,6 @@ class Calculator extends Component {
       },
     };
 
-    console.log('UserChoices is:', this.state.userChoices);
-    console.log('shows is:', this.state.shows);
-    console.log('Toilet is', this.state.shows['Toilet']);
     this.handleClick = this.handleClick.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -221,15 +217,15 @@ class Calculator extends Component {
           <IconContainer>
             <Icon onClick={() => this.handleClick('Bottle')}>
               <Img src="/bottle.png" alt="bottle" />
-              <Value shows={this.state.shows['Bottle']}>x {this.state.userChoices['Bottle']}</Value>
+              <Value shows={this.state.shows.Bottle}>x {this.state.userChoices.Bottle}</Value>
             </Icon>
             <Icon onClick={() => this.handleClick('Cup')}>
               <Img src="/glass.png" alt="glass" />
-              <Value shows={this.state.shows['Cup']}>x {this.state.userChoices['Cup']}</Value>
+              <Value shows={this.state.shows.Cup}>x {this.state.userChoices.Cup}</Value>
             </Icon>
             <Icon onClick={() => this.handleClick('Toilet')}>
               <Img src="/flush.png" alt="flush" />
-              <Value shows={this.state.shows['Toilet']}>x {this.state.userChoices['Toilet']}</Value>
+              <Value shows={this.state.shows.Toilet}>x {this.state.userChoices.Toilet}</Value>
             </Icon>
           </IconContainer>
           <IconContainer>
@@ -241,9 +237,7 @@ class Calculator extends Component {
             </Icon>
             <Icon onClick={() => this.handleClick('Shower')}>
               <Img src="/shower.png" alt="Shower" />
-              <Value shows={this.state.shows['Shower']}>
-                {this.state.userChoices['Shower']} Mins
-              </Value>
+              <Value shows={this.state.shows.Shower}>{this.state.userChoices.Shower} Mins</Value>
             </Icon>
             <Icon onClick={() => this.handleClick('Faucet tap')}>
               <Img src="/plumbing-pipe.png" alt="plumbing pipe" />
