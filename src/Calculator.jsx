@@ -63,6 +63,7 @@ const Icon = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  cursor: pointer;
   border-radius: 1rem;
   color: white;
   background-color: #383854;
@@ -97,6 +98,7 @@ const Value = styled.h3`
 const Calculate = styled.button`
   display: flex;
   justify-content: center;
+  cursor: pointer;
   font-size: 1rem;
   font-weight: bold;
   color: #525010;
