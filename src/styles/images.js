@@ -1,1 +1,10 @@
 import '../../assets/Graph.png';
+import '../../assets/bottle.png';
+import '../../assets/calculator.png';
+import '../../assets/flush.png';
+import '../../assets/glass.png';
+import '../../assets/plumbing-pipe.png';
+import '../../assets/shower.png';
+import '../../assets/statics.png';
+import '../../assets/videos.png';
+import '../../assets/washing-hands.png';

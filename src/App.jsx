@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import React from 'react';
 import Home from './Home';
 import Statistics from './Statistics';
+import Calculator from './Calculator';
 import NavBar from './NavBar';
 import './styles/reset';
 import './styles/style';
@@ -19,6 +20,7 @@ const App = () => (
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/statistics" component={Statistics} />
+        <Route exact path="/calculator" component={Calculator} />
       </Switch>
     </Container>
   </BrowserRouter>
