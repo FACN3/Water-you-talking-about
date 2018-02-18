@@ -48,7 +48,6 @@ test('5 Toilets, 7 minutes Shower, 3 minutes Faucet tap, 2 minutes on the washin
     'Washing machine': 2,
     Dishwasher: 1,
   });
-  console.log(actual);
   t.deepEqual(actual, expected, 'Test Passed, results are 107 liters and a price of 0.954');
   t.end();
 });
