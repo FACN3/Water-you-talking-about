@@ -154,22 +154,22 @@ const Numbers = styled.section`
 `;
 
 const Pic1 = styled.section`
-  display: ${props => props.show};
+  display: ${props => props.shows};
 `;
 const Pic2 = styled.section`
-  display: ${props => props.show};
+  display: ${props => props.shows};
 `;
 const Pic3 = styled.section`
-  display: ${props => props.show};
+  display: ${props => props.shows};
 `;
 const Pic4 = styled.section`
-  display: ${props => props.show};
+  display: ${props => props.shows};
 `;
 const Pic5 = styled.section`
-  display: ${props => props.show};
+  display: ${props => props.shows};
 `;
 const Pic6 = styled.section`
-  display: ${props => props.show};
+  display: ${props => props.shows};
 `;
 
 // Functionality
@@ -190,8 +190,19 @@ class Calculator extends Component {
       },
       cost: 0,
       liters: 0,
-      show: 'none',
+      shows: {
+        Toilet: 'none',
+        Shower: 'none',
+        'Faucet tap': 'none',
+        'Washing hands': 'none',
+        Cup: 'none',
+        Bottle: 'none',
+      },
     };
+
+    console.log('UserChoices is:', this.state.userChoices);
+    console.log('shows is:', this.state.shows);
+    console.log('Toilet is', this.state.shows['Toilet']);
     this.handleClick = this.handleClick.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -202,7 +213,10 @@ class Calculator extends Component {
         ...this.state.userChoices,
         [userChoice]: this.state.userChoices[userChoice] + 1,
       },
-      show: (this.state.show = 'normal'),
+      shows: {
+        ...this.state.shows,
+        [userChoice]: 'block',
+      },
     });
   }
 
@@ -223,19 +237,19 @@ class Calculator extends Component {
           <IconContainer>
             <Icon onClick={() => this.handleClick('Bottle')}>
               <Img src="/bottle.png" alt="bottle" />
-              <Pic1 show={this.state.show}>
+              <Pic1 shows={this.state.shows['Bottle']}>
                 <Value>x {this.state.userChoices['Bottle']}</Value>
               </Pic1>
             </Icon>
             <Icon onClick={() => this.handleClick('Cup')}>
               <Img src="/glass.png" alt="glass" />
-              <Pic2 show={this.state.show}>
+              <Pic2 shows={this.state.shows['Cup']}>
                 <Value>x {this.state.userChoices['Cup']}</Value>
               </Pic2>
             </Icon>
             <Icon onClick={() => this.handleClick('Toilet')}>
               <Img src="/flush.png" alt="flush" />
-              <Pic3 show={this.state.show}>
+              <Pic3 shows={this.state.shows['Toilet']}>
                 <Value>x {this.state.userChoices['Toilet']}</Value>
               </Pic3>
             </Icon>
@@ -243,19 +257,19 @@ class Calculator extends Component {
           <IconContainer>
             <Icon onClick={() => this.handleClick('Washing hands')}>
               <Img src="/washing-hands.png" alt="washing hands" />
-              <Pic4 show={this.state.show}>
+              <Pic4 shows={this.state.shows['Washing hands']}>
                 <Value>{this.state.userChoices['Washing hands']} Mins</Value>
               </Pic4>
             </Icon>
             <Icon onClick={() => this.handleClick('Shower')}>
-              <Img src="/shower.png" alt="shower" />
-              <Pic5 show={this.state.show}>
+              <Img src="/shower.png" alt="Shower" />
+              <Pic5 shows={this.state.shows['Shower']}>
                 <Value>{this.state.userChoices['Shower']} Mins</Value>
               </Pic5>
             </Icon>
             <Icon onClick={() => this.handleClick('Faucet tap')}>
               <Img src="/plumbing-pipe.png" alt="plumbing pipe" />
-              <Pic6 show={this.state.show}>
+              <Pic6 shows={this.state.shows['Faucet tap']}>
                 <Value>{this.state.userChoices['Faucet tap']} Mins</Value>
               </Pic6>
             </Icon>
