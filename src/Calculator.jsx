@@ -86,7 +86,9 @@ const Img = styled.img`
 `;
 
 const Value = styled.h3`
-  display: ${props => props.shows};
+  display: flex;
+  opacity: ${props => props.shows};
+  align-self: center;
   font-weight: bold;
   margin: 0.25rem 0 0 0;
 `;
@@ -173,12 +175,12 @@ class Calculator extends Component {
       cost: 0,
       liters: 0,
       shows: {
-        Toilet: 'none',
-        Shower: 'none',
-        'Faucet tap': 'none',
-        'Washing hands': 'none',
-        Cup: 'none',
-        Bottle: 'none',
+        Toilet: 0,
+        Shower: 0,
+        'Faucet tap': 0,
+        'Washing hands': 0,
+        Cup: 0,
+        Bottle: 0,
       },
     };
 
@@ -197,7 +199,7 @@ class Calculator extends Component {
       },
       shows: {
         ...this.state.shows,
-        [userChoice]: 'block',
+        [userChoice]: '1',
       },
     });
   }
