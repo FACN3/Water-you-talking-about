@@ -57,9 +57,10 @@ const Icon = styled.button`
   padding: 3rem 2rem;
   height: 4rem;
   @media only screen and (max-width: 700px) {
-    padding: 1rem;
+    padding: 3rem 1rem;
   }
   @media only screen and (max-width: 420px) {
+    padding: 3rem 0.5rem;
     margin: 0.5rem;
   }
 `;
@@ -79,6 +80,13 @@ const Input = styled.input`
   border-radius: 2rem;
   color: black;
   font-size: 0.5rem;
+
+  @media only screen and (max-width: 700px) {
+    margin-top: 1rem;
+  }
+  @media only screen and (max-width: 420px) {
+    padding: 0.2rem 0.25rem;
+  }
 `;
 
 const Text = styled.p`
