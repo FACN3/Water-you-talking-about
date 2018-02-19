@@ -71,13 +71,18 @@ const Icon = styled.button`
     padding: 1rem;
   }
   @media only screen and (max-width: 420px) {
-    margin: 0.5rem;
+    padding: 1rem 1rem;
+    margin: 0.5rem 0.1rem;
   }
 `;
 
 const Img = styled.img`
   width: 2rem;
   height: 2rem;
+  @media only screen and (max-width: 420px) {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 `;
 
 const Calculate = styled.button`
@@ -118,6 +123,9 @@ const Results = styled.section`
 
   @media only screen and (max-width: 700px) {
     padding: 0.5rem;
+  }
+  @media only screen and (max-width: 420px) {
+    margin: 0 0.5rem;
   }
 `;
 
