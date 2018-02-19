@@ -94,6 +94,12 @@ const Value = styled.h3`
   margin-top: 0.25rem;
 `;
 
+const HyperLink = styled.a`
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+`;
+
 const Calculate = styled.button`
   display: flex;
   justify-content: center;
@@ -265,9 +271,11 @@ class Calculator extends Component {
               </Value>
             </Icon>
           </IconContainer>
-          <Calculate onClick={() => this.handleSubmit()}>CALCULATE</Calculate>
+          <HyperLink href="#results">
+            <Calculate onClick={() => this.handleSubmit()}>CALCULATE</Calculate>
+          </HyperLink>
         </Activitys>
-        <ResultsContainer>
+        <ResultsContainer id="results">
           <Results>
             <ResultsTitle>Your cost</ResultsTitle>
             <Numbers>{this.state.cost.toFixed(3)} ₪</Numbers>
