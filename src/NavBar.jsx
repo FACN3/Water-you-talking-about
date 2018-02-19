@@ -39,6 +39,7 @@ const Title = styled(Link)`
   }
 
   @media only screen and (max-width: 420px) {
+    width: 8rem;
     font-size: 0.6rem;
     padding: 0.2rem;
   }
