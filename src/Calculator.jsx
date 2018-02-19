@@ -270,7 +270,7 @@ class Calculator extends Component {
         <ResultsContainer>
           <Results>
             <ResultsTitle>Your cost</ResultsTitle>
-            <Numbers>{this.state.cost.toFixed(3)}</Numbers>
+            <Numbers>{this.state.cost.toFixed(3)} ₪</Numbers>
           </Results>
           <Results>
             <ResultsTitle>Liters</ResultsTitle>
