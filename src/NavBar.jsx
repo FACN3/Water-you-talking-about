@@ -17,14 +17,17 @@ const Nav = styled.nav`
   width: 100%;
 `;
 
-const Title = styled.h1`
+const Title = styled(Link)`
   display: flex;
   justify-content: center;
   text-align: center;
+  cursor: pointer;
   border: 0.1rem solid #a3bdff;
   border-radius: 0.5rem;
   color: #a3bdff;
   font-size: 1rem;
+  font-weight: normal;
+  text-decoration: none;
   width: 15rem;
   margin: 1rem;
   padding: 0 1rem 0.2rem;
@@ -36,6 +39,7 @@ const Title = styled.h1`
   }
 
   @media only screen and (max-width: 420px) {
+    width: 8rem;
     font-size: 0.6rem;
     padding: 0.2rem;
   }
@@ -50,6 +54,7 @@ const DropNav = styled.nav`
 const DropdownBtn = styled.a`
   display: flex;
   position: absolute;
+  cursor: pointer;
   left: 0;
   align-items: flex-start;
   color: #a3bdff;
@@ -68,6 +73,7 @@ const animationBar = keyframes`
   `;
 
 const DropdownMenu = styled.div`
+  position: fixed;
   display: ${props => (props.show ? 'flex' : 'none')};
   justify-content: center;
   text-align: center;
@@ -140,7 +146,7 @@ class NavBar extends Component {
             <DropdownBtn onClick={this.DropMenuToggle}>
               <i className="fa fa-bars" />
             </DropdownBtn>
-            <Title>Water You Talking About?</Title>
+            <Title to="/">Water You Talking About?</Title>
           </MenuContainer>
         </Nav>
         <DropNav>
