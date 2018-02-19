@@ -58,10 +58,9 @@ const Icon = styled.button`
   padding: 3rem 2rem;
   height: 4rem;
   @media only screen and (max-width: 700px) {
-    padding: 3rem 1rem;
   }
   @media only screen and (max-width: 420px) {
-    padding: 3rem 0.5rem;
+    padding: 2rem 1rem;
     margin: 0.5rem;
   }
 `;
@@ -71,22 +70,40 @@ const Img = styled.img`
   height: 2rem;
 `;
 
-const Message = styled.p`
+const Info = styled.section`
   position: absolute;
   display: flex;
+  flex-direction: column;
   border-radius: 1rem;
   color: white;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   border: 0.05rem rgba(255, 255, 255, 0.8) solid;
   box-shadow: 0.2rem 0.2rem 0.3rem #888888;
-  top: 7rem;
-  padding: 2rem 10rem 18rem 10rem;
+  top: 2.5rem;
+  padding: 2rem 10rem;
   @media only screen and (max-width: 700px) {
-    padding: 3rem 1rem;
   }
   @media only screen and (max-width: 420px) {
-    padding: 3rem 0.5rem;
+    top: 4rem;
+    padding: 6rem 3rem;
   }
+`;
+
+const Stats = styled.h3``;
+
+const SubStats = styled.h3`
+  margin: 0;
+  font-size: 1rem;
+`;
+
+const Days = styled.h3`
+  margin-top: 5rem;
+  font-size: 1rem;
+`;
+
+const Message = styled.p`
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
 `;
 
 // Functionality
@@ -116,7 +133,16 @@ class Prices extends Component {
               <Img src="/flush.png" alt="flush" />
             </Icon>
           </IconAligner>
-          <Message>Information </Message>
+          <Info>
+            <Stats>Stats</Stats>
+            <SubStats>An average shower is 8 minutes a day </SubStats>
+            <Days>In a Day</Days>
+            <Message>you will use 65 liters and pay 0.04005 ₪ on shower</Message>
+            <Days>In 1 Month</Days>
+            <Message>you will use 1950 liters and pay 17.355 ₪ on shower</Message>
+            <Days>In 1 Year </Days>
+            <Message>you will use 23400 liters and pay 208.26 ₪ on shower</Message>
+          </Info>
           <IconAligner>
             <Icon>
               <Img src="/washing-hands.png" alt="washing hands" />
