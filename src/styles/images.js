@@ -1,3 +1,4 @@
+import '../../assets/Graph.png';
 import '../../assets/bottle.png';
 import '../../assets/calculator.png';
 import '../../assets/flush.png';
