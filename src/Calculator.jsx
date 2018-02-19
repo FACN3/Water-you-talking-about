@@ -65,6 +65,7 @@ const Icon = styled.button`
   justify-content: center;
   cursor: pointer;
   border-radius: 1rem;
+  outline: 0px;
   color: white;
   background-color: #383854;
   border: 0.05rem rgba(255, 255, 255, 0.75) solid;
@@ -104,6 +105,7 @@ const Calculate = styled.button`
   display: flex;
   justify-content: center;
   cursor: pointer;
+  outline: 0px;
   font-size: 1rem;
   font-weight: bold;
   color: #525010;
