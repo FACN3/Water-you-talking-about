@@ -10,7 +10,7 @@ export default function calculatorLogic(data, userChoice) {
         if (activity.name === cur) {
           acc.liters += activity.liters * userChoice[cur];
 
-          acc.cost += Math.trunc(activity.cost * userChoice[cur] * 1000) / 1000;
+          acc.cost += Math.trunc(activity.cost * userChoice[cur] * 10000) / 10000;
         }
       });
       return acc;

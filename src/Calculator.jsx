@@ -203,9 +203,27 @@ class Calculator extends Component {
 
   handleSubmit() {
     const { cost, liters } = calculatorLogic(data, this.state.userChoices);
-    this.setState({ cost, liters });
+    this.setState({
+      cost,
+      liters,
+      userChoices: {
+        Toilet: 0,
+        Shower: 0,
+        'Faucet tap': 0,
+        'Washing hands': 0,
+        Cup: 0,
+        Bottle: 0,
+      },
+      shows: {
+        Toilet: 0,
+        Shower: 0,
+        'Faucet tap': 0,
+        'Washing hands': 0,
+        Cup: 0,
+        Bottle: 0,
+      },
+    });
   }
-
   // App
 
   render() {
@@ -252,7 +270,7 @@ class Calculator extends Component {
         <ResultsContainer>
           <Results>
             <ResultsTitle>Your cost</ResultsTitle>
-            <Numbers>{this.state.cost.toFixed(2)}</Numbers>
+            <Numbers>{this.state.cost.toFixed(3)}</Numbers>
           </Results>
           <Results>
             <ResultsTitle>Liters</ResultsTitle>
