@@ -60,9 +60,8 @@ const IconContainer = styled.section`
 `;
 
 const Icon = styled.button`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: block;
+  align-items: center;
   cursor: pointer;
   border-radius: 1rem;
   outline: 0px;
@@ -71,7 +70,7 @@ const Icon = styled.button`
   border: 0.05rem rgba(255, 255, 255, 0.75) solid;
   box-shadow: 0.2rem 0.2rem 0.3rem #888888;
   margin: 0 0.5rem;
-  padding: 3rem;
+  padding: 2rem 2rem 4rem 2rem;
   height: 4rem;
 
   @media only screen and (max-width: 700px) {
@@ -94,16 +93,19 @@ const Img = styled.img`
 
 const Value = styled.h3`
   display: flex;
+  flex-direction: column;
   opacity: ${props => props.shows};
   align-self: center;
   font-weight: bold;
   margin-top: 0.25rem;
+  width: 2rem;
 `;
 
 const HyperLink = styled.a`
   display: flex;
   justify-content: center;
   text-decoration: none;
+  width: 1rem;
 `;
 
 const Calculate = styled.button`

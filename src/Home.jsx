@@ -8,8 +8,11 @@ const Container = styled.section`
   align-items: center;
   text-align: center;
   color: #383854;
-  margin: 2rem 0 2rem 0;
+  margin: 2rem 0 0 0;
   font-size: 2rem;
+  @media only screen and (max-width: 420px) {
+    margin: 1rem 0;
+  }
 `;
 
 const Title = styled.h1`
@@ -23,6 +26,9 @@ const Title = styled.h1`
     font-size: 1rem;
     margin: 0 0 0.1rem 0;
   }
+  @media only screen and (max-width: 700px) {
+    margin: 0 0 0.1rem 0;
+  }
 `;
 
 const Info = styled.h2`
@@ -30,7 +36,7 @@ const Info = styled.h2`
   width: 100%;
   background-color: rgba(0, 0, 0, 0.25);
   border: 0.05rem rgba(0, 0, 0, 0.5) solid;
-  margin: 0 0 1rem 0;
+  margin-bottom: 1rem;
 
   @media only screen and (max-width: 700px) {
     font-size: 0.5rem;
@@ -38,15 +44,15 @@ const Info = styled.h2`
 
   @media only screen and (max-width: 420px) {
     width: 100%;
+    margin: 0;
   }
 `;
 
 const SubTitle = styled.h2`
-  font-size: 1rem;
-  background-color: #383854;
-  color: #d1f4ff;
+  font-size: 1.5rem;
+  color: #383854;
   border-radius: 1rem;
-  margin: 2rem 0 1rem 0;
+  margin: 0.5rem 0;
   padding: 0.5rem 8rem;
 
   @media only screen and (max-width: 950px) {
@@ -56,8 +62,11 @@ const SubTitle = styled.h2`
   @media only screen and (max-width: 700px) {
     font-size: 0.75rem;
     width: 60%;
-    margin: 1rem 0 1rem 0;
+    margin: 1rem 0;
     padding: 0.5rem;
+  }
+  @media only screen and (max-width: 700px) {
+    margin: 0;
   }
 `;
 
@@ -83,10 +92,11 @@ const Button = styled(Link)`
   display: flex;
   justify-content: center;
   font-size: 1rem;
-  background-color: rgba(0, 0, 0, 0.25);
-  border: 0.1rem rgba(0, 0, 0, 0.25) solid;
+  color: white;
+  background-color: #383854;
+  border: 0.05rem rgba(255, 255, 255, 0.75) solid;
+  box-shadow: 0.2rem 0.2rem 0.3rem #888888;
   width: 100%;
-  color: #383854;
   width: 25%;
   border-radius: 1rem;
   margin: 0 2rem;
@@ -109,7 +119,7 @@ const Button = styled(Link)`
     font-size: 1rem;
     width: 65%;
     padding: 1rem;
-    margin: 1rem 0 0 0;
+    margin: 0.5rem 0 0 0;
   }
 `;
 
