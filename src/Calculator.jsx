@@ -60,9 +60,7 @@ const IconContainer = styled.section`
 `;
 
 const Icon = styled.button`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: block;
   align-items: center;
   cursor: pointer;
   border-radius: 1rem;
@@ -72,7 +70,7 @@ const Icon = styled.button`
   border: 0.05rem rgba(255, 255, 255, 0.75) solid;
   box-shadow: 0.2rem 0.2rem 0.3rem #888888;
   margin: 0 0.5rem;
-  padding: 3rem;
+  padding: 2rem 2rem 4rem 2rem;
   height: 4rem;
 
   @media only screen and (max-width: 700px) {
