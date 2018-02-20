@@ -104,6 +104,7 @@ const HyperLink = styled.a`
   display: flex;
   justify-content: center;
   text-decoration: none;
+  width: 1rem;
 `;
 
 const Calculate = styled.button`
