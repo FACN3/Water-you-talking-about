@@ -42,9 +42,8 @@ const Info = styled.h2`
 `;
 
 const SubTitle = styled.h2`
-  font-size: 1rem;
-  background-color: #383854;
-  color: #d1f4ff;
+  font-size: 1.5rem;
+  color: #383854;
   border-radius: 1rem;
   margin: 2rem 0 1rem 0;
   padding: 0.5rem 8rem;
@@ -83,10 +82,11 @@ const Button = styled(Link)`
   display: flex;
   justify-content: center;
   font-size: 1rem;
-  background-color: rgba(0, 0, 0, 0.25);
-  border: 0.1rem rgba(0, 0, 0, 0.25) solid;
+  color: white;
+  background-color: #383854;
+  border: 0.05rem rgba(255, 255, 255, 0.75) solid;
+  box-shadow: 0.2rem 0.2rem 0.3rem #888888;
   width: 100%;
-  color: #383854;
   width: 25%;
   border-radius: 1rem;
   margin: 0 2rem;

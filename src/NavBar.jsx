@@ -73,7 +73,7 @@ const animationBar = keyframes`
   `;
 
 const DropdownMenu = styled.div`
-  position: fixed;
+  position: absolute;
   display: ${props => (props.show ? 'flex' : 'none')};
   justify-content: center;
   text-align: center;
