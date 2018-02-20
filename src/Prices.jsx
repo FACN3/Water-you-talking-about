@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import prices from './fixtures/prices';
+import pricesLogic from './lib/Prices';
 // styling
 
 const Container = styled.section`
@@ -80,7 +81,7 @@ const Info = styled.section`
   border: 0.05rem rgba(255, 255, 255, 0.8) solid;
   box-shadow: 0.2rem 0.2rem 0.3rem #888888;
   top: 2.5rem;
-  padding: 2rem 10rem;
+  padding: 2rem 2rem;
   @media only screen and (max-width: 700px) {
   }
   @media only screen and (max-width: 420px) {
@@ -111,46 +112,58 @@ const Message = styled.p`
 class Prices extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      activity: {},
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(userClick) {
+    const info = pricesLogic(prices, userClick);
+    this.setState({
+      activity: info,
+    });
   }
 
   // App
 
   render() {
+    console.log(this.state);
+
     return (
       <Container>
         <SubTitle>Please write the amount of time/minutes you used in each activity below</SubTitle>
 
         <IconContainer>
           <IconAligner>
-            <Icon>
+            <Icon onClick={() => this.handleClick('Bottle')}>
               <Img src="/bottle.png" alt="bottle" />
             </Icon>
-            <Icon>
+            <Icon onClick={() => this.handleClick('Cup')}>
               <Img src="/glass.png" alt="glass" />
             </Icon>
-            <Icon>
+            <Icon onClick={() => this.handleClick('Toilet')}>
               <Img src="/flush.png" alt="flush" />
             </Icon>
           </IconAligner>
           <Info>
             <Stats>Stats</Stats>
-            <SubStats>{prices.info[1].stats}</SubStats>
+            <SubStats>{this.state.activity.stats}</SubStats>
             <Days>In a Day</Days>
-            <Message>{prices.info[1].day}</Message>
+            <Message>{this.state.activity.day}</Message>
             <Days>In 1 Month</Days>
-            <Message>{prices.info[1].month}</Message>
+            <Message>{this.state.activity.month}</Message>
             <Days>In 1 Year </Days>
-            <Message>{prices.info[1].year}</Message>
+            <Message>{this.state.activity.year}</Message>
           </Info>
           <IconAligner>
-            <Icon>
+            <Icon onClick={() => this.handleClick('Washing hands')}>
               <Img src="/washing-hands.png" alt="washing hands" />
             </Icon>
-            <Icon>
+            <Icon onClick={() => this.handleClick('Shower')}>
               <Img src="/shower.png" alt="Shower" />
             </Icon>
-            <Icon>
+            <Icon onClick={() => this.handleClick('Faucet tap')}>
               <Img src="/plumbing-pipe.png" alt="plumbing pipe" />
             </Icon>
           </IconAligner>
