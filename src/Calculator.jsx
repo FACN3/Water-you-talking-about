@@ -63,6 +63,7 @@ const Icon = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   cursor: pointer;
   border-radius: 1rem;
   outline: 0px;
@@ -94,10 +95,12 @@ const Img = styled.img`
 
 const Value = styled.h3`
   display: flex;
+  flex-direction: column;
   opacity: ${props => props.shows};
   align-self: center;
   font-weight: bold;
   margin-top: 0.25rem;
+  width: 2rem;
 `;
 
 const HyperLink = styled.a`
