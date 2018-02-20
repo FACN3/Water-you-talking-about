@@ -10,7 +10,7 @@ const Container = styled.section`
   text-align: center;
   align-items: center;
   color: #383854;
-  margin: 2rem 0;
+  margin-top: 1rem;
   font-size: 2rem;
   @media only screen and (max-width: 420px) {
     margin: 0.25rem 0;
@@ -19,7 +19,7 @@ const Container = styled.section`
 
 const SubTitle = styled.h2`
   font-size: 1rem;
-  width: 50%;
+  width: 100%;
   color: #383854;
   @media only screen and (max-width: 700px) {
     font-size: 0.75rem;
@@ -46,37 +46,39 @@ const IconContainer = styled.section`
 `;
 
 const Icon = styled.button`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: block;
   align-items: center;
   border-radius: 1rem;
   color: white;
   background-color: #383854;
   border: 0.05rem rgba(255, 255, 255, 0.75) solid;
   box-shadow: 0.2rem 0.2rem 0.3rem #888888;
-  margin: 0.5rem 2rem;
-  padding: 3rem 2rem;
-  height: 4rem;
+  margin: 0.25rem 2rem;
+  padding: 2rem 2rem 2rem 2rem;
+  height: 6rem;
   @media only screen and (max-width: 700px) {
   }
   @media only screen and (max-width: 420px) {
     padding: 2rem 1rem;
-    margin: 0.5rem;
+    margin: 0.25rem;
   }
 `;
 
 const Img = styled.img`
   width: 2rem;
   height: 2rem;
+  @media only screen and (max-width: 420px) {
+  }
 `;
 
 const Info = styled.section`
   position: absolute;
   display: ${props => props.show};
   flex-direction: column;
+  align-items: center;
   border-radius: 1rem;
   color: white;
+  width: 30rem;
   background-color: rgba(0, 0, 0, 0.9);
   border: 0.05rem rgba(255, 255, 255, 0.8) solid;
   box-shadow: 0.2rem 0.2rem 0.3rem #888888;
@@ -86,25 +88,42 @@ const Info = styled.section`
   }
   @media only screen and (max-width: 420px) {
     top: 4rem;
-    padding: 6rem 3rem;
+    width: 9rem;
+    padding: 0.5rem 1rem 2.5rem 1rem;
   }
 `;
 
-const Stats = styled.h3``;
+const Stats = styled.h3`
+  @media only screen and (max-width: 420px) {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+`;
 
 const SubStats = styled.h3`
   margin: 0;
   font-size: 1rem;
+  @media only screen and (max-width: 420px) {
+    font-size: 0.5rem;
+    margin-bottom: 0;
+  }
 `;
 
 const Days = styled.h3`
-  margin-top: 5rem;
+  margin-top: 3rem;
   font-size: 1rem;
+  @media only screen and (max-width: 420px) {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
 `;
 
 const Message = styled.p`
-  margin-top: 0.75rem;
   font-size: 0.75rem;
+  @media only screen and (max-width: 420px) {
+    font-size: 0.5rem;
+    width: 8rem;
+  }
 `;
 
 // Functionality
@@ -140,7 +159,6 @@ class Prices extends Component {
     return (
       <Container>
         <SubTitle>Please write the amount of time/minutes you used in each activity below</SubTitle>
-
         <IconContainer>
           <IconAligner>
             <Icon onClick={() => this.handleClick('Bottle')}>
