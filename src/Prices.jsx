@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-
+import prices from './fixtures/prices';
 // styling
 
 const Container = styled.section`
@@ -135,13 +135,13 @@ class Prices extends Component {
           </IconAligner>
           <Info>
             <Stats>Stats</Stats>
-            <SubStats>An average shower is 8 minutes a day </SubStats>
+            <SubStats>{prices.info[1].stats}</SubStats>
             <Days>In a Day</Days>
-            <Message>you will use 65 liters and pay 0.04005 ₪ on shower</Message>
+            <Message>{prices.info[1].day}</Message>
             <Days>In 1 Month</Days>
-            <Message>you will use 1950 liters and pay 17.355 ₪ on shower</Message>
+            <Message>{prices.info[1].month}</Message>
             <Days>In 1 Year </Days>
-            <Message>you will use 23400 liters and pay 208.26 ₪ on shower</Message>
+            <Message>{prices.info[1].year}</Message>
           </Info>
           <IconAligner>
             <Icon>
