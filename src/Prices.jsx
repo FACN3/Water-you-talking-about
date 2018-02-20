@@ -73,7 +73,7 @@ const Img = styled.img`
 
 const Info = styled.section`
   position: absolute;
-  display: flex;
+  display: ${props => props.show};
   flex-direction: column;
   border-radius: 1rem;
   color: white;
@@ -81,7 +81,7 @@ const Info = styled.section`
   border: 0.05rem rgba(255, 255, 255, 0.8) solid;
   box-shadow: 0.2rem 0.2rem 0.3rem #888888;
   top: 2.5rem;
-  padding: 2rem 2rem;
+  padding: 2rem 5rem;
   @media only screen and (max-width: 700px) {
   }
   @media only screen and (max-width: 420px) {
@@ -114,22 +114,29 @@ class Prices extends Component {
     super(props);
     this.state = {
       activity: {},
+      show: 'none',
     };
     this.handleClick = this.handleClick.bind(this);
+    this.resetClick = this.resetClick.bind(this);
   }
 
   handleClick(userClick) {
     const info = pricesLogic(prices, userClick);
     this.setState({
       activity: info,
+      show: 'flex',
+    });
+  }
+
+  resetClick() {
+    this.setState({
+      show: 'none',
     });
   }
 
   // App
 
   render() {
-    console.log(this.state);
-
     return (
       <Container>
         <SubTitle>Please write the amount of time/minutes you used in each activity below</SubTitle>
@@ -146,7 +153,7 @@ class Prices extends Component {
               <Img src="/flush.png" alt="flush" />
             </Icon>
           </IconAligner>
-          <Info>
+          <Info show={this.state.show} onClick={() => this.resetClick()}>
             <Stats>Stats</Stats>
             <SubStats>{this.state.activity.stats}</SubStats>
             <Days>In a Day</Days>

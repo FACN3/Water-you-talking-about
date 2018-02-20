@@ -18,7 +18,7 @@ module.exports = {
       name: 'Faucet tap',
       stats: '',
       day: '',
-      month: '',
+      month: '2313',
       year: '',
     },
     {
@@ -26,13 +26,13 @@ module.exports = {
       stats: '',
       day: '',
       month: '',
-      year: '',
+      year: 'lol',
     },
     {
       name: 'Bottle',
       stats: '',
       day: '',
-      month: '',
+      month: 'toilet',
       year: '',
     },
     {
