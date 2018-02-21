@@ -48,6 +48,7 @@ const IconContainer = styled.section`
 const Icon = styled.button`
   display: block;
   align-items: center;
+  cursor: pointer;
   border-radius: 1rem;
   color: white;
   background-color: #383854;
@@ -76,6 +77,7 @@ const Info = styled.section`
   display: ${props => props.show};
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
   border-radius: 1rem;
   color: white;
   width: 30rem;
