@@ -77,7 +77,7 @@ const Icon = styled.button`
     padding: 1rem;
   }
   @media only screen and (max-width: 420px) {
-    padding: 1rem 1rem;
+    padding: 1rem 0.5rem;
     margin: 0.5rem 0.1rem;
   }
 `;
@@ -98,7 +98,7 @@ const Value = styled.h3`
   align-self: center;
   font-weight: bold;
   margin-top: 0.25rem;
-  width: 2rem;
+  width: 3rem;
 `;
 
 const HyperLink = styled.a`
