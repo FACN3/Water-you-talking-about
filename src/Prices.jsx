@@ -13,7 +13,7 @@ const Container = styled.section`
   margin-top: 1rem;
   font-size: 2rem;
   @media only screen and (max-width: 420px) {
-    margin: 0.25rem 0;
+    margin-top: 0.25rem;
   }
 `;
 
@@ -60,8 +60,9 @@ const Icon = styled.button`
   @media only screen and (max-width: 700px) {
   }
   @media only screen and (max-width: 420px) {
-    padding: 2rem 1rem;
+    padding: 1rem;
     margin: 0.25rem;
+    height: 4rem;
   }
 `;
 
@@ -69,6 +70,8 @@ const Img = styled.img`
   width: 2rem;
   height: 2rem;
   @media only screen and (max-width: 420px) {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 `;
 
@@ -89,7 +92,7 @@ const Info = styled.section`
   @media only screen and (max-width: 700px) {
   }
   @media only screen and (max-width: 420px) {
-    top: 4rem;
+    top: 2.5rem;
     width: 9rem;
     padding: 0.5rem 1rem 2.5rem 1rem;
   }
