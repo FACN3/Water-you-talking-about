@@ -17,7 +17,7 @@ const Container = styled.section`
 
 const Title = styled.h1`
   font-size: 1.5rem;
-  width: 100%;
+  width: 99%;
   background-color: rgba(0, 0, 0, 0.25);
   border: 0.05rem rgba(0, 0, 0, 0.5) solid;
   margin: 0 0 0.25rem 0;
@@ -33,7 +33,7 @@ const Title = styled.h1`
 
 const Info = styled.h2`
   font-size: 1rem;
-  width: 100%;
+  width: 99%;
   background-color: rgba(0, 0, 0, 0.25);
   border: 0.05rem rgba(0, 0, 0, 0.5) solid;
   margin-bottom: 1rem;
@@ -43,7 +43,6 @@ const Info = styled.h2`
   }
 
   @media only screen and (max-width: 420px) {
-    width: 100%;
     margin: 0;
   }
 `;

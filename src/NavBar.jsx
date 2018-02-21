@@ -47,6 +47,7 @@ const Title = styled(Link)`
 
 const DropNav = styled.nav`
   display: flex;
+  flex-direction: column;
   align-content: center;
   width: 100%;
 `;
@@ -111,7 +112,7 @@ const HLink = styled(Link)`
   }
   @media only screen and (max-width: 420px) {
     padding: 0;
-    font-size: 0.8rem;
+    font-size: 0.55rem;
   }
 `;
 
