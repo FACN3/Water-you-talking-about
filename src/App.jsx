@@ -4,6 +4,7 @@ import React from 'react';
 import Home from './Home';
 import Statistics from './Statistics';
 import Calculator from './Calculator';
+import Prices from './Prices';
 import NavBar from './NavBar';
 import './styles/reset';
 import './styles/style';
@@ -21,6 +22,7 @@ const App = () => (
         <Route exact path="/" component={Home} />
         <Route exact path="/statistics" component={Statistics} />
         <Route exact path="/calculator" component={Calculator} />
+        <Route exact path="/prices" component={Prices} />
       </Switch>
     </Container>
   </BrowserRouter>

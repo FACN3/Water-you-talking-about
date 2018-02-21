@@ -115,7 +115,7 @@ const Calculate = styled.button`
   outline: 0px;
   font-size: 1rem;
   font-weight: bold;
-  color: #525010;
+  color: #303058;
   max-width: 50%;
   background-color: rgba(255, 221, 0, 0.5);
   border: 0.05rem rgba(0, 0, 0, 0.5) solid;
